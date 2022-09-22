@@ -32,7 +32,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.closeButton = new CustomControls.RJControls.RJButton();
+            this.scrollPokemon = new CustomControls.RJControls.RJButton();
+            this.markCaught = new CustomControls.RJControls.RJButton();
+            this.markSeen = new CustomControls.RJControls.RJButton();
+            this.veiwStats = new CustomControls.RJControls.RJButton();
+            this.editStats = new CustomControls.RJControls.RJButton();
+            this.addPokemon = new CustomControls.RJControls.RJButton();
+            this.removePokemon = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -46,6 +54,13 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Controls.Add(this.scrollPokemon);
+            this.flowLayoutPanel1.Controls.Add(this.markCaught);
+            this.flowLayoutPanel1.Controls.Add(this.markSeen);
+            this.flowLayoutPanel1.Controls.Add(this.veiwStats);
+            this.flowLayoutPanel1.Controls.Add(this.editStats);
+            this.flowLayoutPanel1.Controls.Add(this.addPokemon);
+            this.flowLayoutPanel1.Controls.Add(this.removePokemon);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 124);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(332, 338);
@@ -69,6 +84,132 @@
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // scrollPokemon
+            // 
+            this.scrollPokemon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.scrollPokemon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.scrollPokemon.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.scrollPokemon.BorderRadius = 0;
+            this.scrollPokemon.BorderSize = 0;
+            this.scrollPokemon.FlatAppearance.BorderSize = 0;
+            this.scrollPokemon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scrollPokemon.ForeColor = System.Drawing.Color.White;
+            this.scrollPokemon.Location = new System.Drawing.Point(3, 3);
+            this.scrollPokemon.Name = "scrollPokemon";
+            this.scrollPokemon.Size = new System.Drawing.Size(326, 70);
+            this.scrollPokemon.TabIndex = 0;
+            this.scrollPokemon.Text = "pokemon scroller";
+            this.scrollPokemon.TextColor = System.Drawing.Color.White;
+            this.scrollPokemon.UseVisualStyleBackColor = false;
+            // 
+            // markCaught
+            // 
+            this.markCaught.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.markCaught.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.markCaught.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.markCaught.BorderRadius = 0;
+            this.markCaught.BorderSize = 0;
+            this.markCaught.FlatAppearance.BorderSize = 0;
+            this.markCaught.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.markCaught.ForeColor = System.Drawing.Color.White;
+            this.markCaught.Location = new System.Drawing.Point(3, 79);
+            this.markCaught.Name = "markCaught";
+            this.markCaught.Size = new System.Drawing.Size(160, 70);
+            this.markCaught.TabIndex = 1;
+            this.markCaught.Text = "mark as caught";
+            this.markCaught.TextColor = System.Drawing.Color.White;
+            this.markCaught.UseVisualStyleBackColor = false;
+            // 
+            // markSeen
+            // 
+            this.markSeen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.markSeen.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.markSeen.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.markSeen.BorderRadius = 0;
+            this.markSeen.BorderSize = 0;
+            this.markSeen.FlatAppearance.BorderSize = 0;
+            this.markSeen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.markSeen.ForeColor = System.Drawing.Color.White;
+            this.markSeen.Location = new System.Drawing.Point(169, 79);
+            this.markSeen.Name = "markSeen";
+            this.markSeen.Size = new System.Drawing.Size(160, 70);
+            this.markSeen.TabIndex = 2;
+            this.markSeen.Text = "mark as seen";
+            this.markSeen.TextColor = System.Drawing.Color.White;
+            this.markSeen.UseVisualStyleBackColor = false;
+            // 
+            // veiwStats
+            // 
+            this.veiwStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.veiwStats.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.veiwStats.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.veiwStats.BorderRadius = 0;
+            this.veiwStats.BorderSize = 0;
+            this.veiwStats.FlatAppearance.BorderSize = 0;
+            this.veiwStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.veiwStats.ForeColor = System.Drawing.Color.White;
+            this.veiwStats.Location = new System.Drawing.Point(3, 155);
+            this.veiwStats.Name = "veiwStats";
+            this.veiwStats.Size = new System.Drawing.Size(160, 70);
+            this.veiwStats.TabIndex = 3;
+            this.veiwStats.Text = "view stats";
+            this.veiwStats.TextColor = System.Drawing.Color.White;
+            this.veiwStats.UseVisualStyleBackColor = false;
+            // 
+            // editStats
+            // 
+            this.editStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.editStats.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.editStats.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.editStats.BorderRadius = 0;
+            this.editStats.BorderSize = 0;
+            this.editStats.FlatAppearance.BorderSize = 0;
+            this.editStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editStats.ForeColor = System.Drawing.Color.White;
+            this.editStats.Location = new System.Drawing.Point(169, 155);
+            this.editStats.Name = "editStats";
+            this.editStats.Size = new System.Drawing.Size(160, 70);
+            this.editStats.TabIndex = 4;
+            this.editStats.Text = "edit stats";
+            this.editStats.TextColor = System.Drawing.Color.White;
+            this.editStats.UseVisualStyleBackColor = false;
+            // 
+            // addPokemon
+            // 
+            this.addPokemon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.addPokemon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.addPokemon.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.addPokemon.BorderRadius = 0;
+            this.addPokemon.BorderSize = 0;
+            this.addPokemon.FlatAppearance.BorderSize = 0;
+            this.addPokemon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addPokemon.ForeColor = System.Drawing.Color.White;
+            this.addPokemon.Location = new System.Drawing.Point(3, 231);
+            this.addPokemon.Name = "addPokemon";
+            this.addPokemon.Size = new System.Drawing.Size(160, 70);
+            this.addPokemon.TabIndex = 5;
+            this.addPokemon.Text = "add pokemon";
+            this.addPokemon.TextColor = System.Drawing.Color.White;
+            this.addPokemon.UseVisualStyleBackColor = false;
+            // 
+            // removePokemon
+            // 
+            this.removePokemon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.removePokemon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.removePokemon.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.removePokemon.BorderRadius = 0;
+            this.removePokemon.BorderSize = 0;
+            this.removePokemon.FlatAppearance.BorderSize = 0;
+            this.removePokemon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removePokemon.ForeColor = System.Drawing.Color.White;
+            this.removePokemon.Location = new System.Drawing.Point(169, 231);
+            this.removePokemon.Name = "removePokemon";
+            this.removePokemon.Size = new System.Drawing.Size(160, 70);
+            this.removePokemon.TabIndex = 6;
+            this.removePokemon.Text = "remove pokemon";
+            this.removePokemon.TextColor = System.Drawing.Color.White;
+            this.removePokemon.UseVisualStyleBackColor = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,6 +222,7 @@
             this.Name = "Dashboard";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -90,5 +232,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private CustomControls.RJControls.RJButton closeButton;
+        private CustomControls.RJControls.RJButton scrollPokemon;
+        private CustomControls.RJControls.RJButton markCaught;
+        private CustomControls.RJControls.RJButton markSeen;
+        private CustomControls.RJControls.RJButton veiwStats;
+        private CustomControls.RJControls.RJButton editStats;
+        private CustomControls.RJControls.RJButton addPokemon;
+        private CustomControls.RJControls.RJButton removePokemon;
     }
 }
