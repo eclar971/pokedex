@@ -16,5 +16,13 @@ namespace pokedex
         {
             InitializeComponent();
         }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            this.Hide();
+            home.ShowDialog();
+            this.Close();
+        }
     }
 }
