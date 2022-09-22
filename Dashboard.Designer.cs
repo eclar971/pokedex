@@ -43,6 +43,7 @@
             this.editStats = new CustomControls.RJControls.RJButton();
             this.addPokemon = new CustomControls.RJControls.RJButton();
             this.removePokemon = new CustomControls.RJControls.RJButton();
+            this.caughtScreen1 = new pokedex.caughtScreen();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pokemonImage)).BeginInit();
@@ -267,12 +268,21 @@
             this.removePokemon.TextColor = System.Drawing.Color.White;
             this.removePokemon.UseVisualStyleBackColor = false;
             // 
+            // caughtScreen1
+            // 
+            this.caughtScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.caughtScreen1.Location = new System.Drawing.Point(342, 5);
+            this.caughtScreen1.Name = "caughtScreen1";
+            this.caughtScreen1.Size = new System.Drawing.Size(430, 457);
+            this.caughtScreen1.TabIndex = 7;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.caughtScreen1);
             this.Controls.Add(this.rightScroll);
             this.Controls.Add(this.leftScroll);
             this.Controls.Add(this.pokemonInfo);
@@ -306,5 +316,6 @@
         private System.Windows.Forms.Label pokemonInfo;
         private FontAwesome.Sharp.IconButton leftScroll;
         private FontAwesome.Sharp.IconButton rightScroll;
+        private caughtScreen caughtScreen1;
     }
 }
