@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace pokedex
 {
-    public partial class Home : Form
+    public partial class Dashboard : Form
     {
-        public Home()
+        public Dashboard()
         {
             InitializeComponent();
-        }
-
-        private void openButton_Click(object sender, EventArgs e)
-        {
-            Dashboard dashboard = new Dashboard();
-            this.Hide();
-            dashboard.ShowDialog();
-            this.Close();
         }
     }
 }

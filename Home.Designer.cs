@@ -48,15 +48,16 @@
             this.openButton.TabIndex = 0;
             this.openButton.TextColor = System.Drawing.Color.White;
             this.openButton.UseVisualStyleBackColor = false;
+            this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
-            // Form1
+            // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(384, 461);
             this.Controls.Add(this.openButton);
-            this.Name = "Form1";
+            this.Name = "Home";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
