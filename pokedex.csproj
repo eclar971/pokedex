@@ -85,6 +85,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="seenScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="seenScreen.Designer.cs">
+      <DependentUpon>seenScreen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="caughtScreen.resx">
       <DependentUpon>caughtScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +112,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="seenScreen.resx">
+      <DependentUpon>seenScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

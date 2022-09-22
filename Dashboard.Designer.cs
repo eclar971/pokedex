@@ -44,6 +44,7 @@
             this.editStats = new CustomControls.RJControls.RJButton();
             this.addPokemon = new CustomControls.RJControls.RJButton();
             this.removePokemon = new CustomControls.RJControls.RJButton();
+            this.seenScreen1 = new pokedex.seenScreen();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pokemonImage)).BeginInit();
@@ -203,6 +204,7 @@
             this.markSeen.Text = "mark as seen";
             this.markSeen.TextColor = System.Drawing.Color.White;
             this.markSeen.UseVisualStyleBackColor = false;
+            this.markSeen.Click += new System.EventHandler(this.markSeen_Click);
             // 
             // veiwStats
             // 
@@ -280,6 +282,15 @@
             this.removePokemon.TextColor = System.Drawing.Color.White;
             this.removePokemon.UseVisualStyleBackColor = false;
             // 
+            // seenScreen1
+            // 
+            this.seenScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.seenScreen1.Location = new System.Drawing.Point(342, 5);
+            this.seenScreen1.Name = "seenScreen1";
+            this.seenScreen1.Size = new System.Drawing.Size(430, 457);
+            this.seenScreen1.TabIndex = 7;
+            this.seenScreen1.Visible = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +304,7 @@
             this.Controls.Add(this.pokemonImage);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.seenScreen1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -323,5 +335,6 @@
         private FontAwesome.Sharp.IconButton leftScroll;
         private FontAwesome.Sharp.IconButton rightScroll;
         private caughtScreen caughtScreen1;
+        private seenScreen seenScreen1;
     }
 }

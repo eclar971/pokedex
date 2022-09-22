@@ -33,11 +33,21 @@ namespace pokedex
         private void markCaught_Click(object sender, EventArgs e)
         {
             caughtScreen1.Show();
+            seenScreen1.Hide();
+            caughtScreen1.BringToFront();
         }
 
         private void scrollPokemon_Click(object sender, EventArgs e)
         {
             caughtScreen1.Hide();
+            seenScreen1.Hide();
+        }
+
+        private void markSeen_Click(object sender, EventArgs e)
+        {
+            caughtScreen1.Hide();
+            seenScreen1.Show();
+            seenScreen1.BringToFront();
         }
     }
 }
