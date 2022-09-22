@@ -34,8 +34,8 @@
             // 
             // openButton
             // 
-            this.openButton.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.openButton.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.openButton.BackColor = System.Drawing.Color.Blue;
+            this.openButton.BackgroundColor = System.Drawing.Color.Blue;
             this.openButton.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.openButton.BorderRadius = 45;
             this.openButton.BorderSize = 0;

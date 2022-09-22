@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.closeButton = new CustomControls.RJControls.RJButton();
             this.scrollPokemon = new CustomControls.RJControls.RJButton();
             this.markCaught = new CustomControls.RJControls.RJButton();
             this.markSeen = new CustomControls.RJControls.RJButton();
@@ -39,8 +38,14 @@
             this.editStats = new CustomControls.RJControls.RJButton();
             this.addPokemon = new CustomControls.RJControls.RJButton();
             this.removePokemon = new CustomControls.RJControls.RJButton();
+            this.closeButton = new CustomControls.RJControls.RJButton();
+            this.pokemonImage = new System.Windows.Forms.PictureBox();
+            this.pokemonInfo = new System.Windows.Forms.Label();
+            this.leftScroll = new FontAwesome.Sharp.IconButton();
+            this.rightScroll = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pokemonImage)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -66,24 +71,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(332, 338);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.closeButton.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            this.closeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.closeButton.BorderRadius = 45;
-            this.closeButton.BorderSize = 0;
-            this.closeButton.FlatAppearance.BorderSize = 0;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.ForeColor = System.Drawing.Color.White;
-            this.closeButton.Location = new System.Drawing.Point(5, 5);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(90, 90);
-            this.closeButton.TabIndex = 2;
-            this.closeButton.TextColor = System.Drawing.Color.White;
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
             // scrollPokemon
             // 
             this.scrollPokemon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -93,6 +80,7 @@
             this.scrollPokemon.BorderSize = 0;
             this.scrollPokemon.FlatAppearance.BorderSize = 0;
             this.scrollPokemon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scrollPokemon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scrollPokemon.ForeColor = System.Drawing.Color.White;
             this.scrollPokemon.Location = new System.Drawing.Point(3, 3);
             this.scrollPokemon.Name = "scrollPokemon";
@@ -111,6 +99,7 @@
             this.markCaught.BorderSize = 0;
             this.markCaught.FlatAppearance.BorderSize = 0;
             this.markCaught.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.markCaught.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.markCaught.ForeColor = System.Drawing.Color.White;
             this.markCaught.Location = new System.Drawing.Point(3, 79);
             this.markCaught.Name = "markCaught";
@@ -129,6 +118,7 @@
             this.markSeen.BorderSize = 0;
             this.markSeen.FlatAppearance.BorderSize = 0;
             this.markSeen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.markSeen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.markSeen.ForeColor = System.Drawing.Color.White;
             this.markSeen.Location = new System.Drawing.Point(169, 79);
             this.markSeen.Name = "markSeen";
@@ -147,6 +137,7 @@
             this.veiwStats.BorderSize = 0;
             this.veiwStats.FlatAppearance.BorderSize = 0;
             this.veiwStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.veiwStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.veiwStats.ForeColor = System.Drawing.Color.White;
             this.veiwStats.Location = new System.Drawing.Point(3, 155);
             this.veiwStats.Name = "veiwStats";
@@ -165,6 +156,7 @@
             this.editStats.BorderSize = 0;
             this.editStats.FlatAppearance.BorderSize = 0;
             this.editStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editStats.ForeColor = System.Drawing.Color.White;
             this.editStats.Location = new System.Drawing.Point(169, 155);
             this.editStats.Name = "editStats";
@@ -183,6 +175,7 @@
             this.addPokemon.BorderSize = 0;
             this.addPokemon.FlatAppearance.BorderSize = 0;
             this.addPokemon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addPokemon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addPokemon.ForeColor = System.Drawing.Color.White;
             this.addPokemon.Location = new System.Drawing.Point(3, 231);
             this.addPokemon.Name = "addPokemon";
@@ -201,6 +194,7 @@
             this.removePokemon.BorderSize = 0;
             this.removePokemon.FlatAppearance.BorderSize = 0;
             this.removePokemon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removePokemon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removePokemon.ForeColor = System.Drawing.Color.White;
             this.removePokemon.Location = new System.Drawing.Point(169, 231);
             this.removePokemon.Name = "removePokemon";
@@ -210,12 +204,77 @@
             this.removePokemon.TextColor = System.Drawing.Color.White;
             this.removePokemon.UseVisualStyleBackColor = false;
             // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.closeButton.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.closeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.closeButton.BorderRadius = 45;
+            this.closeButton.BorderSize = 0;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.Location = new System.Drawing.Point(5, 5);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(90, 90);
+            this.closeButton.TabIndex = 2;
+            this.closeButton.TextColor = System.Drawing.Color.White;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // pokemonImage
+            // 
+            this.pokemonImage.Location = new System.Drawing.Point(547, 12);
+            this.pokemonImage.Name = "pokemonImage";
+            this.pokemonImage.Size = new System.Drawing.Size(225, 337);
+            this.pokemonImage.TabIndex = 3;
+            this.pokemonImage.TabStop = false;
+            // 
+            // pokemonInfo
+            // 
+            this.pokemonInfo.AutoSize = true;
+            this.pokemonInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pokemonInfo.ForeColor = System.Drawing.Color.White;
+            this.pokemonInfo.Location = new System.Drawing.Point(339, 12);
+            this.pokemonInfo.Name = "pokemonInfo";
+            this.pokemonInfo.Size = new System.Drawing.Size(141, 17);
+            this.pokemonInfo.TabIndex = 4;
+            this.pokemonInfo.Text = "Pokemon Information";
+            // 
+            // leftScroll
+            // 
+            this.leftScroll.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.leftScroll.IconColor = System.Drawing.Color.Black;
+            this.leftScroll.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.leftScroll.Location = new System.Drawing.Point(451, 355);
+            this.leftScroll.Name = "leftScroll";
+            this.leftScroll.Size = new System.Drawing.Size(90, 90);
+            this.leftScroll.TabIndex = 5;
+            this.leftScroll.Text = "iconButton1";
+            this.leftScroll.UseVisualStyleBackColor = true;
+            // 
+            // rightScroll
+            // 
+            this.rightScroll.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.rightScroll.IconColor = System.Drawing.Color.Black;
+            this.rightScroll.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.rightScroll.Location = new System.Drawing.Point(547, 355);
+            this.rightScroll.Name = "rightScroll";
+            this.rightScroll.Size = new System.Drawing.Size(90, 90);
+            this.rightScroll.TabIndex = 6;
+            this.rightScroll.Text = "iconButton2";
+            this.rightScroll.UseVisualStyleBackColor = true;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.rightScroll);
+            this.Controls.Add(this.leftScroll);
+            this.Controls.Add(this.pokemonInfo);
+            this.Controls.Add(this.pokemonImage);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
@@ -223,7 +282,9 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pokemonImage)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -239,5 +300,9 @@
         private CustomControls.RJControls.RJButton editStats;
         private CustomControls.RJControls.RJButton addPokemon;
         private CustomControls.RJControls.RJButton removePokemon;
+        private System.Windows.Forms.PictureBox pokemonImage;
+        private System.Windows.Forms.Label pokemonInfo;
+        private FontAwesome.Sharp.IconButton leftScroll;
+        private FontAwesome.Sharp.IconButton rightScroll;
     }
 }

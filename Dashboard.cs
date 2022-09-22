@@ -24,5 +24,6 @@ namespace pokedex
             home.ShowDialog();
             this.Close();
         }
+
     }
 }
