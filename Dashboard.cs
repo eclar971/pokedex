@@ -25,5 +25,19 @@ namespace pokedex
             this.Close();
         }
 
+        private void caughtScreen1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void markCaught_Click(object sender, EventArgs e)
+        {
+            caughtScreen1.Show();
+        }
+
+        private void scrollPokemon_Click(object sender, EventArgs e)
+        {
+            caughtScreen1.Hide();
+        }
     }
 }
