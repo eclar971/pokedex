@@ -97,6 +97,12 @@
     <Compile Include="seenScreen.Designer.cs">
       <DependentUpon>seenScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="statsScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="statsScreen.Designer.cs">
+      <DependentUpon>statsScreen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="caughtScreen.resx">
       <DependentUpon>caughtScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="seenScreen.resx">
       <DependentUpon>seenScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="statsScreen.resx">
+      <DependentUpon>statsScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

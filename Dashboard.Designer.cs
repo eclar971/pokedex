@@ -42,6 +42,7 @@
             this.closeButton = new CustomControls.RJControls.RJButton();
             this.seenScreen1 = new pokedex.seenScreen();
             this.scollerSceen1 = new pokedex.scollerSceen();
+            this.statsScreen1 = new pokedex.statsScreen();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -147,6 +148,7 @@
             this.veiwStats.Text = "view stats";
             this.veiwStats.TextColor = System.Drawing.Color.White;
             this.veiwStats.UseVisualStyleBackColor = false;
+            this.veiwStats.Click += new System.EventHandler(this.veiwStats_Click);
             // 
             // editStats
             // 
@@ -251,12 +253,21 @@
             this.scollerSceen1.TabIndex = 8;
             this.scollerSceen1.Load += new System.EventHandler(this.scollerSceen1_Load);
             // 
+            // statsScreen1
+            // 
+            this.statsScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.statsScreen1.Location = new System.Drawing.Point(342, 0);
+            this.statsScreen1.Name = "statsScreen1";
+            this.statsScreen1.Size = new System.Drawing.Size(430, 457);
+            this.statsScreen1.TabIndex = 9;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.statsScreen1);
             this.Controls.Add(this.scollerSceen1);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -288,5 +299,6 @@
         private caughtScreen caughtScreen1;
         private seenScreen seenScreen1;
         private scollerSceen scollerSceen1;
+        private statsScreen statsScreen1;
     }
 }
