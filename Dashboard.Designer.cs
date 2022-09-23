@@ -31,12 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pokemonImage = new System.Windows.Forms.PictureBox();
-            this.pokemonInfo = new System.Windows.Forms.Label();
-            this.leftScroll = new FontAwesome.Sharp.IconButton();
-            this.rightScroll = new FontAwesome.Sharp.IconButton();
-            this.caughtScreen1 = new pokedex.caughtScreen();
-            this.closeButton = new CustomControls.RJControls.RJButton();
             this.scrollPokemon = new CustomControls.RJControls.RJButton();
             this.markCaught = new CustomControls.RJControls.RJButton();
             this.markSeen = new CustomControls.RJControls.RJButton();
@@ -44,10 +38,12 @@
             this.editStats = new CustomControls.RJControls.RJButton();
             this.addPokemon = new CustomControls.RJControls.RJButton();
             this.removePokemon = new CustomControls.RJControls.RJButton();
+            this.caughtScreen1 = new pokedex.caughtScreen();
+            this.closeButton = new CustomControls.RJControls.RJButton();
             this.seenScreen1 = new pokedex.seenScreen();
+            this.scollerSceen1 = new pokedex.scollerSceen();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pokemonImage)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -72,79 +68,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(332, 338);
             this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // pokemonImage
-            // 
-            this.pokemonImage.Location = new System.Drawing.Point(547, 12);
-            this.pokemonImage.Name = "pokemonImage";
-            this.pokemonImage.Size = new System.Drawing.Size(225, 337);
-            this.pokemonImage.TabIndex = 3;
-            this.pokemonImage.TabStop = false;
-            // 
-            // pokemonInfo
-            // 
-            this.pokemonInfo.AutoSize = true;
-            this.pokemonInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pokemonInfo.ForeColor = System.Drawing.Color.White;
-            this.pokemonInfo.Location = new System.Drawing.Point(339, 12);
-            this.pokemonInfo.Name = "pokemonInfo";
-            this.pokemonInfo.Size = new System.Drawing.Size(141, 17);
-            this.pokemonInfo.TabIndex = 4;
-            this.pokemonInfo.Text = "Pokemon Information";
-            // 
-            // leftScroll
-            // 
-            this.leftScroll.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.leftScroll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.leftScroll.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.leftScroll.IconColor = System.Drawing.Color.Black;
-            this.leftScroll.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.leftScroll.Location = new System.Drawing.Point(451, 355);
-            this.leftScroll.Name = "leftScroll";
-            this.leftScroll.Size = new System.Drawing.Size(90, 90);
-            this.leftScroll.TabIndex = 5;
-            this.leftScroll.UseVisualStyleBackColor = false;
-            // 
-            // rightScroll
-            // 
-            this.rightScroll.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.rightScroll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.rightScroll.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
-            this.rightScroll.IconColor = System.Drawing.Color.Black;
-            this.rightScroll.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.rightScroll.Location = new System.Drawing.Point(547, 355);
-            this.rightScroll.Name = "rightScroll";
-            this.rightScroll.Size = new System.Drawing.Size(90, 90);
-            this.rightScroll.TabIndex = 6;
-            this.rightScroll.UseVisualStyleBackColor = false;
-            // 
-            // caughtScreen1
-            // 
-            this.caughtScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.caughtScreen1.Location = new System.Drawing.Point(342, 5);
-            this.caughtScreen1.Name = "caughtScreen1";
-            this.caughtScreen1.Size = new System.Drawing.Size(430, 457);
-            this.caughtScreen1.TabIndex = 7;
-            this.caughtScreen1.Visible = false;
-            this.caughtScreen1.Load += new System.EventHandler(this.caughtScreen1_Load);
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.closeButton.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            this.closeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.closeButton.BorderRadius = 45;
-            this.closeButton.BorderSize = 0;
-            this.closeButton.FlatAppearance.BorderSize = 0;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.ForeColor = System.Drawing.Color.White;
-            this.closeButton.Location = new System.Drawing.Point(5, 5);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(90, 90);
-            this.closeButton.TabIndex = 2;
-            this.closeButton.TextColor = System.Drawing.Color.White;
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // scrollPokemon
             // 
@@ -282,14 +205,51 @@
             this.removePokemon.TextColor = System.Drawing.Color.White;
             this.removePokemon.UseVisualStyleBackColor = false;
             // 
+            // caughtScreen1
+            // 
+            this.caughtScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.caughtScreen1.Location = new System.Drawing.Point(342, 0);
+            this.caughtScreen1.Name = "caughtScreen1";
+            this.caughtScreen1.Size = new System.Drawing.Size(430, 457);
+            this.caughtScreen1.TabIndex = 7;
+            this.caughtScreen1.Visible = false;
+            this.caughtScreen1.Load += new System.EventHandler(this.caughtScreen1_Load);
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.closeButton.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.closeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.closeButton.BorderRadius = 45;
+            this.closeButton.BorderSize = 0;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.Location = new System.Drawing.Point(5, 5);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(90, 90);
+            this.closeButton.TabIndex = 2;
+            this.closeButton.TextColor = System.Drawing.Color.White;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
             // seenScreen1
             // 
             this.seenScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.seenScreen1.Location = new System.Drawing.Point(342, 5);
+            this.seenScreen1.Location = new System.Drawing.Point(342, 0);
             this.seenScreen1.Name = "seenScreen1";
             this.seenScreen1.Size = new System.Drawing.Size(430, 457);
             this.seenScreen1.TabIndex = 7;
             this.seenScreen1.Visible = false;
+            // 
+            // scollerSceen1
+            // 
+            this.scollerSceen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.scollerSceen1.Location = new System.Drawing.Point(342, 0);
+            this.scollerSceen1.Name = "scollerSceen1";
+            this.scollerSceen1.Size = new System.Drawing.Size(430, 457);
+            this.scollerSceen1.TabIndex = 8;
+            this.scollerSceen1.Load += new System.EventHandler(this.scollerSceen1_Load);
             // 
             // Dashboard
             // 
@@ -297,24 +257,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.caughtScreen1);
-            this.Controls.Add(this.rightScroll);
-            this.Controls.Add(this.leftScroll);
-            this.Controls.Add(this.pokemonInfo);
-            this.Controls.Add(this.pokemonImage);
+            this.Controls.Add(this.scollerSceen1);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.seenScreen1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.caughtScreen1);
+            this.Controls.Add(this.seenScreen1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Dashboard";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pokemonImage)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -330,11 +285,8 @@
         private CustomControls.RJControls.RJButton editStats;
         private CustomControls.RJControls.RJButton addPokemon;
         private CustomControls.RJControls.RJButton removePokemon;
-        private System.Windows.Forms.PictureBox pokemonImage;
-        private System.Windows.Forms.Label pokemonInfo;
-        private FontAwesome.Sharp.IconButton leftScroll;
-        private FontAwesome.Sharp.IconButton rightScroll;
         private caughtScreen caughtScreen1;
         private seenScreen seenScreen1;
+        private scollerSceen scollerSceen1;
     }
 }

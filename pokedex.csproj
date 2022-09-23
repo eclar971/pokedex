@@ -85,6 +85,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="scollerSceen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="scollerSceen.Designer.cs">
+      <DependentUpon>scollerSceen.cs</DependentUpon>
+    </Compile>
     <Compile Include="seenScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +118,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="scollerSceen.resx">
+      <DependentUpon>scollerSceen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="seenScreen.resx">
       <DependentUpon>seenScreen.cs</DependentUpon>
     </EmbeddedResource>

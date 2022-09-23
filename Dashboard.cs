@@ -34,20 +34,29 @@ namespace pokedex
         {
             caughtScreen1.Show();
             seenScreen1.Hide();
+            scollerSceen1.Hide();
             caughtScreen1.BringToFront();
         }
 
         private void scrollPokemon_Click(object sender, EventArgs e)
         {
+            scollerSceen1.Show();
             caughtScreen1.Hide();
             seenScreen1.Hide();
+            scollerSceen1.BringToFront();
         }
 
         private void markSeen_Click(object sender, EventArgs e)
         {
-            caughtScreen1.Hide();
             seenScreen1.Show();
+            caughtScreen1.Hide();
+            scollerSceen1.Hide();
             seenScreen1.BringToFront();
+        }
+
+        private void scollerSceen1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
