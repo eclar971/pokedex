@@ -45,6 +45,7 @@
             this.statsScreen1 = new pokedex.statsScreen();
             this.changeStatsScreen1 = new pokedex.changeStatsScreen();
             this.addPokemon1 = new pokedex.addPokemon();
+            this.removePokemon1 = new pokedex.removePokemon();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -210,6 +211,7 @@
             this.removePokemon.Text = "remove pokemon";
             this.removePokemon.TextColor = System.Drawing.Color.White;
             this.removePokemon.UseVisualStyleBackColor = false;
+            this.removePokemon.Click += new System.EventHandler(this.removePokemon_Click);
             // 
             // caughtScreen1
             // 
@@ -285,12 +287,22 @@
             this.addPokemon1.TabIndex = 10;
             this.addPokemon1.Visible = false;
             // 
+            // removePokemon1
+            // 
+            this.removePokemon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.removePokemon1.Location = new System.Drawing.Point(338, 5);
+            this.removePokemon1.Name = "removePokemon1";
+            this.removePokemon1.Size = new System.Drawing.Size(430, 457);
+            this.removePokemon1.TabIndex = 11;
+            this.removePokemon1.Visible = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.removePokemon1);
             this.Controls.Add(this.addPokemon1);
             this.Controls.Add(this.statsScreen1);
             this.Controls.Add(this.scollerSceen1);
@@ -328,5 +340,6 @@
         private statsScreen statsScreen1;
         private changeStatsScreen changeStatsScreen1;
         private addPokemon addPokemon1;
+        private removePokemon removePokemon1;
     }
 }
