@@ -44,6 +44,7 @@
             this.scollerSceen1 = new pokedex.scollerSceen();
             this.statsScreen1 = new pokedex.statsScreen();
             this.changeStatsScreen1 = new pokedex.changeStatsScreen();
+            this.addPokemon1 = new pokedex.addPokemon();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -189,6 +190,7 @@
             this.addPokemon.Text = "add pokemon";
             this.addPokemon.TextColor = System.Drawing.Color.White;
             this.addPokemon.UseVisualStyleBackColor = false;
+            this.addPokemon.Click += new System.EventHandler(this.addPokemon_Click);
             // 
             // removePokemon
             // 
@@ -274,12 +276,22 @@
             this.changeStatsScreen1.TabIndex = 7;
             this.changeStatsScreen1.Visible = false;
             // 
+            // addPokemon1
+            // 
+            this.addPokemon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.addPokemon1.Location = new System.Drawing.Point(338, 5);
+            this.addPokemon1.Name = "addPokemon1";
+            this.addPokemon1.Size = new System.Drawing.Size(430, 457);
+            this.addPokemon1.TabIndex = 10;
+            this.addPokemon1.Visible = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.addPokemon1);
             this.Controls.Add(this.statsScreen1);
             this.Controls.Add(this.scollerSceen1);
             this.Controls.Add(this.closeButton);
@@ -315,5 +327,6 @@
         private scollerSceen scollerSceen1;
         private statsScreen statsScreen1;
         private changeStatsScreen changeStatsScreen1;
+        private addPokemon addPokemon1;
     }
 }

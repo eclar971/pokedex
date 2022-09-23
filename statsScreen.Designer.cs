@@ -61,6 +61,7 @@
             // 
             this.name.AutoSize = true;
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.ForeColor = System.Drawing.Color.White;
             this.name.Location = new System.Drawing.Point(223, 12);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(114, 17);
@@ -71,6 +72,7 @@
             // 
             this.number.AutoSize = true;
             this.number.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.number.ForeColor = System.Drawing.Color.White;
             this.number.Location = new System.Drawing.Point(230, 64);
             this.number.Name = "number";
             this.number.Size = new System.Drawing.Size(20, 17);
@@ -81,6 +83,7 @@
             // 
             this.defense.AutoSize = true;
             this.defense.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.defense.ForeColor = System.Drawing.Color.White;
             this.defense.Location = new System.Drawing.Point(3, 305);
             this.defense.Name = "defense";
             this.defense.Size = new System.Drawing.Size(65, 17);
@@ -91,6 +94,7 @@
             // 
             this.specialDefense.AutoSize = true;
             this.specialDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.specialDefense.ForeColor = System.Drawing.Color.White;
             this.specialDefense.Location = new System.Drawing.Point(3, 378);
             this.specialDefense.Name = "specialDefense";
             this.specialDefense.Size = new System.Drawing.Size(59, 17);
@@ -101,6 +105,7 @@
             // 
             this.hp.AutoSize = true;
             this.hp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hp.ForeColor = System.Drawing.Color.White;
             this.hp.Location = new System.Drawing.Point(3, 230);
             this.hp.Name = "hp";
             this.hp.Size = new System.Drawing.Size(30, 17);
@@ -111,6 +116,7 @@
             // 
             this.attack.AutoSize = true;
             this.attack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attack.ForeColor = System.Drawing.Color.White;
             this.attack.Location = new System.Drawing.Point(230, 230);
             this.attack.Name = "attack";
             this.attack.Size = new System.Drawing.Size(51, 17);
@@ -121,6 +127,7 @@
             // 
             this.speed.AutoSize = true;
             this.speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.speed.ForeColor = System.Drawing.Color.White;
             this.speed.Location = new System.Drawing.Point(230, 378);
             this.speed.Name = "speed";
             this.speed.Size = new System.Drawing.Size(53, 17);
@@ -131,6 +138,7 @@
             // 
             this.specialAttack.AutoSize = true;
             this.specialAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.specialAttack.ForeColor = System.Drawing.Color.White;
             this.specialAttack.Location = new System.Drawing.Point(230, 305);
             this.specialAttack.Name = "specialAttack";
             this.specialAttack.Size = new System.Drawing.Size(57, 17);
@@ -141,6 +149,7 @@
             // 
             this.totalStats.AutoSize = true;
             this.totalStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalStats.ForeColor = System.Drawing.Color.White;
             this.totalStats.Location = new System.Drawing.Point(182, 420);
             this.totalStats.Name = "totalStats";
             this.totalStats.Size = new System.Drawing.Size(78, 17);
@@ -151,6 +160,7 @@
             // 
             this.type.AutoSize = true;
             this.type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.type.ForeColor = System.Drawing.Color.White;
             this.type.Location = new System.Drawing.Point(230, 121);
             this.type.Name = "type";
             this.type.Size = new System.Drawing.Size(44, 17);

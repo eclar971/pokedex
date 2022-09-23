@@ -37,6 +37,7 @@ namespace pokedex
             scollerSceen1.Hide();
             statsScreen1.Hide();
             changeStatsScreen1.Hide();
+            addPokemon1.Hide();
             caughtScreen1.BringToFront();
         }
 
@@ -47,6 +48,7 @@ namespace pokedex
             seenScreen1.Hide();
             statsScreen1.Hide();
             changeStatsScreen1.Hide();
+            addPokemon1.Hide();
             scollerSceen1.BringToFront();
         }
 
@@ -57,6 +59,7 @@ namespace pokedex
             scollerSceen1.Hide();
             statsScreen1.Hide();
             changeStatsScreen1.Hide();
+            addPokemon1.Hide();
             seenScreen1.BringToFront();
         }
 
@@ -72,6 +75,7 @@ namespace pokedex
             caughtScreen1.Hide();
             scollerSceen1.Hide();
             changeStatsScreen1.Hide();
+            addPokemon1.Hide();
             statsScreen1.BringToFront();
         }
 
@@ -82,7 +86,19 @@ namespace pokedex
             seenScreen1.Hide();
             caughtScreen1.Hide();
             scollerSceen1.Hide();
+            addPokemon1.Hide();
             changeStatsScreen1.BringToFront();
+        }
+
+        private void addPokemon_Click(object sender, EventArgs e)
+        {
+            addPokemon1.Show();
+            changeStatsScreen1.Hide();
+            statsScreen1.Hide();
+            seenScreen1.Hide();
+            caughtScreen1.Hide();
+            scollerSceen1.Hide();
+            addPokemon1.BringToFront();
         }
     }
 }

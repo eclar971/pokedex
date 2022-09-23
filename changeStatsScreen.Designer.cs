@@ -48,6 +48,7 @@
             // 
             this.attackChange.AutoSize = true;
             this.attackChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attackChange.ForeColor = System.Drawing.Color.White;
             this.attackChange.Location = new System.Drawing.Point(271, 240);
             this.attackChange.Name = "attackChange";
             this.attackChange.Size = new System.Drawing.Size(51, 17);
@@ -58,6 +59,7 @@
             // 
             this.speedChange.AutoSize = true;
             this.speedChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.speedChange.ForeColor = System.Drawing.Color.White;
             this.speedChange.Location = new System.Drawing.Point(271, 388);
             this.speedChange.Name = "speedChange";
             this.speedChange.Size = new System.Drawing.Size(53, 17);
@@ -68,6 +70,7 @@
             // 
             this.specialAttackChange.AutoSize = true;
             this.specialAttackChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.specialAttackChange.ForeColor = System.Drawing.Color.White;
             this.specialAttackChange.Location = new System.Drawing.Point(271, 315);
             this.specialAttackChange.Name = "specialAttackChange";
             this.specialAttackChange.Size = new System.Drawing.Size(57, 17);
@@ -78,6 +81,7 @@
             // 
             this.hpChange.AutoSize = true;
             this.hpChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hpChange.ForeColor = System.Drawing.Color.White;
             this.hpChange.Location = new System.Drawing.Point(50, 240);
             this.hpChange.Name = "hpChange";
             this.hpChange.Size = new System.Drawing.Size(30, 17);
@@ -88,6 +92,7 @@
             // 
             this.specialDefenseChange.AutoSize = true;
             this.specialDefenseChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.specialDefenseChange.ForeColor = System.Drawing.Color.White;
             this.specialDefenseChange.Location = new System.Drawing.Point(50, 388);
             this.specialDefenseChange.Name = "specialDefenseChange";
             this.specialDefenseChange.Size = new System.Drawing.Size(59, 17);
@@ -98,6 +103,7 @@
             // 
             this.defenseChange.AutoSize = true;
             this.defenseChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.defenseChange.ForeColor = System.Drawing.Color.White;
             this.defenseChange.Location = new System.Drawing.Point(50, 315);
             this.defenseChange.Name = "defenseChange";
             this.defenseChange.Size = new System.Drawing.Size(65, 17);
