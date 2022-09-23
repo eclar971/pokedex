@@ -47,6 +47,7 @@
             this.deletePokemon.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.deletePokemon.FlatAppearance.BorderSize = 0;
             this.deletePokemon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.deletePokemon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deletePokemon.ForeColor = System.Drawing.Color.White;
             this.deletePokemon.Location = new System.Drawing.Point(0, 378);
             this.deletePokemon.Name = "deletePokemon";
