@@ -47,6 +47,7 @@
             this.rightScroll.Size = new System.Drawing.Size(90, 90);
             this.rightScroll.TabIndex = 10;
             this.rightScroll.UseVisualStyleBackColor = false;
+            this.rightScroll.Click += new System.EventHandler(this.rightScroll_Click);
             // 
             // leftScroll
             // 
@@ -60,6 +61,7 @@
             this.leftScroll.Size = new System.Drawing.Size(90, 90);
             this.leftScroll.TabIndex = 9;
             this.leftScroll.UseVisualStyleBackColor = false;
+            this.leftScroll.Click += new System.EventHandler(this.leftScroll_Click);
             // 
             // pokemonInfo
             // 
@@ -71,6 +73,7 @@
             this.pokemonInfo.Size = new System.Drawing.Size(141, 17);
             this.pokemonInfo.TabIndex = 8;
             this.pokemonInfo.Text = "Pokemon Information";
+            this.pokemonInfo.Click += new System.EventHandler(this.pokemonInfo_Click);
             // 
             // pokemonImage
             // 

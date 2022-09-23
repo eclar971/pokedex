@@ -50,5 +50,9 @@ namespace pokedex
         public int SpecialDefense { get; set; }
         public int Speed { get; set; }
 
+        public override string ToString()
+        {
+            return $"Name:{Name}\nNumber:{Num}\nType:{Type}";
+        }
     }
 }

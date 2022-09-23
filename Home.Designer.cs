@@ -41,12 +41,12 @@
             this.openButton.BorderSize = 0;
             this.openButton.FlatAppearance.BorderSize = 0;
             this.openButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openButton.ForeColor = System.Drawing.Color.White;
+            this.openButton.ForeColor = System.Drawing.Color.Black;
             this.openButton.Location = new System.Drawing.Point(5, 5);
             this.openButton.Name = "openButton";
             this.openButton.Size = new System.Drawing.Size(90, 90);
             this.openButton.TabIndex = 0;
-            this.openButton.TextColor = System.Drawing.Color.White;
+            this.openButton.TextColor = System.Drawing.Color.Black;
             this.openButton.UseVisualStyleBackColor = false;
             this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
