@@ -43,6 +43,7 @@
             this.seenScreen1 = new pokedex.seenScreen();
             this.scollerSceen1 = new pokedex.scollerSceen();
             this.statsScreen1 = new pokedex.statsScreen();
+            this.changeStatsScreen1 = new pokedex.changeStatsScreen();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -168,6 +169,7 @@
             this.editStats.Text = "edit stats";
             this.editStats.TextColor = System.Drawing.Color.White;
             this.editStats.UseVisualStyleBackColor = false;
+            this.editStats.Click += new System.EventHandler(this.editStats_Click);
             // 
             // addPokemon
             // 
@@ -210,7 +212,7 @@
             // caughtScreen1
             // 
             this.caughtScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.caughtScreen1.Location = new System.Drawing.Point(342, 0);
+            this.caughtScreen1.Location = new System.Drawing.Point(339, 5);
             this.caughtScreen1.Name = "caughtScreen1";
             this.caughtScreen1.Size = new System.Drawing.Size(430, 457);
             this.caughtScreen1.TabIndex = 7;
@@ -238,7 +240,7 @@
             // seenScreen1
             // 
             this.seenScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.seenScreen1.Location = new System.Drawing.Point(342, 0);
+            this.seenScreen1.Location = new System.Drawing.Point(339, 5);
             this.seenScreen1.Name = "seenScreen1";
             this.seenScreen1.Size = new System.Drawing.Size(430, 457);
             this.seenScreen1.TabIndex = 7;
@@ -247,19 +249,30 @@
             // scollerSceen1
             // 
             this.scollerSceen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.scollerSceen1.Location = new System.Drawing.Point(342, 0);
+            this.scollerSceen1.Location = new System.Drawing.Point(339, 5);
             this.scollerSceen1.Name = "scollerSceen1";
             this.scollerSceen1.Size = new System.Drawing.Size(430, 457);
             this.scollerSceen1.TabIndex = 8;
+            this.scollerSceen1.Visible = false;
             this.scollerSceen1.Load += new System.EventHandler(this.scollerSceen1_Load);
             // 
             // statsScreen1
             // 
             this.statsScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.statsScreen1.Location = new System.Drawing.Point(342, 0);
+            this.statsScreen1.Location = new System.Drawing.Point(339, 5);
             this.statsScreen1.Name = "statsScreen1";
             this.statsScreen1.Size = new System.Drawing.Size(430, 457);
             this.statsScreen1.TabIndex = 9;
+            this.statsScreen1.Visible = false;
+            // 
+            // changeStatsScreen1
+            // 
+            this.changeStatsScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.changeStatsScreen1.Location = new System.Drawing.Point(339, 5);
+            this.changeStatsScreen1.Name = "changeStatsScreen1";
+            this.changeStatsScreen1.Size = new System.Drawing.Size(430, 457);
+            this.changeStatsScreen1.TabIndex = 7;
+            this.changeStatsScreen1.Visible = false;
             // 
             // Dashboard
             // 
@@ -274,6 +287,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.caughtScreen1);
             this.Controls.Add(this.seenScreen1);
+            this.Controls.Add(this.changeStatsScreen1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Dashboard";
@@ -300,5 +314,6 @@
         private seenScreen seenScreen1;
         private scollerSceen scollerSceen1;
         private statsScreen statsScreen1;
+        private changeStatsScreen changeStatsScreen1;
     }
 }

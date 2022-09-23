@@ -30,20 +30,20 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.whereSeenLabel = new System.Windows.Forms.Label();
-            this.whereCaught = new CustomControls.RJControls.RJTextBox();
+            this.whereSeen = new CustomControls.RJControls.RJTextBox();
             this.isShinnyLabelSeen = new System.Windows.Forms.Label();
             this.isShinnySeen = new CustomControls.RJControls.RJTextBox();
-            this.caughtPokemonPic = new CustomControls.RJControls.RJCircularPictureBox();
             this.whenSeenLabel = new System.Windows.Forms.Label();
             this.whenSeen = new CustomControls.RJControls.RJTextBox();
+            this.seenPokemonPic = new CustomControls.RJControls.RJCircularPictureBox();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.caughtPokemonPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seenPokemonPic)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.whereSeenLabel);
-            this.flowLayoutPanel1.Controls.Add(this.whereCaught);
+            this.flowLayoutPanel1.Controls.Add(this.whereSeen);
             this.flowLayoutPanel1.Controls.Add(this.isShinnyLabelSeen);
             this.flowLayoutPanel1.Controls.Add(this.isShinnySeen);
             this.flowLayoutPanel1.Controls.Add(this.whenSeenLabel);
@@ -64,24 +64,24 @@
             this.whereSeenLabel.TabIndex = 2;
             this.whereSeenLabel.Text = "Please enter where you saw it";
             // 
-            // whereCaught
+            // whereSeen
             // 
-            this.whereCaught.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.whereCaught.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.whereCaught.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.whereCaught.BorderSize = 2;
-            this.whereCaught.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whereCaught.ForeColor = System.Drawing.Color.DimGray;
-            this.whereCaught.Location = new System.Drawing.Point(4, 21);
-            this.whereCaught.Margin = new System.Windows.Forms.Padding(4);
-            this.whereCaught.Multiline = false;
-            this.whereCaught.Name = "whereCaught";
-            this.whereCaught.Padding = new System.Windows.Forms.Padding(7);
-            this.whereCaught.PasswordChar = false;
-            this.whereCaught.Size = new System.Drawing.Size(250, 32);
-            this.whereCaught.TabIndex = 3;
-            this.whereCaught.Texts = "";
-            this.whereCaught.UnderlinedStyle = false;
+            this.whereSeen.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.whereSeen.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.whereSeen.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.whereSeen.BorderSize = 2;
+            this.whereSeen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.whereSeen.ForeColor = System.Drawing.Color.DimGray;
+            this.whereSeen.Location = new System.Drawing.Point(4, 21);
+            this.whereSeen.Margin = new System.Windows.Forms.Padding(4);
+            this.whereSeen.Multiline = false;
+            this.whereSeen.Name = "whereSeen";
+            this.whereSeen.Padding = new System.Windows.Forms.Padding(7);
+            this.whereSeen.PasswordChar = false;
+            this.whereSeen.Size = new System.Drawing.Size(250, 32);
+            this.whereSeen.TabIndex = 3;
+            this.whereSeen.Texts = "";
+            this.whereSeen.UnderlinedStyle = false;
             // 
             // isShinnyLabelSeen
             // 
@@ -113,21 +113,6 @@
             this.isShinnySeen.Texts = "";
             this.isShinnySeen.UnderlinedStyle = false;
             // 
-            // caughtPokemonPic
-            // 
-            this.caughtPokemonPic.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.caughtPokemonPic.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.caughtPokemonPic.BorderColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.caughtPokemonPic.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.caughtPokemonPic.BorderSize = 2;
-            this.caughtPokemonPic.GradientAngle = 50F;
-            this.caughtPokemonPic.Location = new System.Drawing.Point(94, 3);
-            this.caughtPokemonPic.Name = "caughtPokemonPic";
-            this.caughtPokemonPic.Size = new System.Drawing.Size(233, 233);
-            this.caughtPokemonPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.caughtPokemonPic.TabIndex = 2;
-            this.caughtPokemonPic.TabStop = false;
-            // 
             // whenSeenLabel
             // 
             this.whenSeenLabel.AutoSize = true;
@@ -158,18 +143,33 @@
             this.whenSeen.Texts = "";
             this.whenSeen.UnderlinedStyle = false;
             // 
+            // seenPokemonPic
+            // 
+            this.seenPokemonPic.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.seenPokemonPic.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.seenPokemonPic.BorderColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.seenPokemonPic.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.seenPokemonPic.BorderSize = 2;
+            this.seenPokemonPic.GradientAngle = 50F;
+            this.seenPokemonPic.Location = new System.Drawing.Point(94, 3);
+            this.seenPokemonPic.Name = "seenPokemonPic";
+            this.seenPokemonPic.Size = new System.Drawing.Size(233, 233);
+            this.seenPokemonPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.seenPokemonPic.TabIndex = 2;
+            this.seenPokemonPic.TabStop = false;
+            // 
             // seenScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.caughtPokemonPic);
+            this.Controls.Add(this.seenPokemonPic);
             this.Name = "seenScreen";
             this.Size = new System.Drawing.Size(430, 457);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.caughtPokemonPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seenPokemonPic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -178,10 +178,10 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label whereSeenLabel;
-        private CustomControls.RJControls.RJTextBox whereCaught;
+        private CustomControls.RJControls.RJTextBox whereSeen;
         private System.Windows.Forms.Label isShinnyLabelSeen;
         private CustomControls.RJControls.RJTextBox isShinnySeen;
-        private CustomControls.RJControls.RJCircularPictureBox caughtPokemonPic;
+        private CustomControls.RJControls.RJCircularPictureBox seenPokemonPic;
         private System.Windows.Forms.Label whenSeenLabel;
         private CustomControls.RJControls.RJTextBox whenSeen;
     }

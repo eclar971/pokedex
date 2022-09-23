@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rjCircularPictureBox1 = new CustomControls.RJControls.RJCircularPictureBox();
+            this.statsPic = new CustomControls.RJControls.RJCircularPictureBox();
             this.name = new System.Windows.Forms.Label();
             this.number = new System.Windows.Forms.Label();
             this.defense = new System.Windows.Forms.Label();
@@ -39,23 +39,23 @@
             this.specialAttack = new System.Windows.Forms.Label();
             this.totalStats = new System.Windows.Forms.Label();
             this.type = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statsPic)).BeginInit();
             this.SuspendLayout();
             // 
-            // rjCircularPictureBox1
+            // statsPic
             // 
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 2;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(217, 217);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox1.TabIndex = 0;
-            this.rjCircularPictureBox1.TabStop = false;
+            this.statsPic.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.statsPic.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.statsPic.BorderColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.statsPic.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.statsPic.BorderSize = 2;
+            this.statsPic.GradientAngle = 50F;
+            this.statsPic.Location = new System.Drawing.Point(0, 0);
+            this.statsPic.Name = "statsPic";
+            this.statsPic.Size = new System.Drawing.Size(217, 217);
+            this.statsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.statsPic.TabIndex = 0;
+            this.statsPic.TabStop = false;
             // 
             // name
             // 
@@ -172,11 +172,11 @@
             this.Controls.Add(this.defense);
             this.Controls.Add(this.number);
             this.Controls.Add(this.name);
-            this.Controls.Add(this.rjCircularPictureBox1);
+            this.Controls.Add(this.statsPic);
             this.Name = "statsScreen";
             this.Size = new System.Drawing.Size(430, 457);
             this.Load += new System.EventHandler(this.statsScreen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statsPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,7 +184,7 @@
 
         #endregion
 
-        private CustomControls.RJControls.RJCircularPictureBox rjCircularPictureBox1;
+        private CustomControls.RJControls.RJCircularPictureBox statsPic;
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label number;
         private System.Windows.Forms.Label defense;
