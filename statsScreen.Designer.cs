@@ -56,6 +56,7 @@
             this.statsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.statsPic.TabIndex = 0;
             this.statsPic.TabStop = false;
+            this.statsPic.Click += new System.EventHandler(this.statsPic_Click);
             // 
             // name
             // 

@@ -14,7 +14,8 @@ namespace pokedex
     public partial class scollerSceen : UserControl
     {
         public List<Pokemon> pokemon = new List<Pokemon>();
-        int i = 0;
+        public int i = 0;
+        public string imagePath = "";
         public scollerSceen()
         {
             InitializeComponent();
@@ -24,7 +25,8 @@ namespace pokedex
         {
             pokemon = SqliteDataAccess.LoadPokemon();
             pokemonInfo.Text = pokemon[i].ToString();
-            pokemonImage.Image = Image.FromFile($"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')} (Custom).png");
+            imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')} (Custom).png";
+            pokemonImage.Image = Image.FromFile(imagePath);
         }
 
         private void pokemonInfo_Click(object sender, EventArgs e)
@@ -46,20 +48,21 @@ namespace pokedex
             bool XYvariant = (pokemon[i].Name[pokemon[i].Name.Length - 1] != 'X' && pokemon[i].Name[pokemon[i].Name.Length - 1] != 'Y');
             if (pokemon[i].Name.Contains("Mega") && XYvariant)
             {
-                pokemonImage.ImageLocation = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Mega (Custom).png";
+                imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Mega (Custom).png";
             }
             else if (pokemon[i].Name.Contains("Mega"))
             {
-                pokemonImage.ImageLocation = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Mega-{pokemon[i].Name[pokemon[i].Name.Length - 1]} (Custom).png";
+                imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Mega-{pokemon[i].Name[pokemon[i].Name.Length - 1]} (Custom).png";
             }
             else if (pokemon[i].Name.Contains("Alola"))
             {
-                pokemonImage.ImageLocation = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Alola (Custom).png";
+                imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Alola (Custom).png";
             }
             else
             {
-                pokemonImage.Image = Image.FromFile($"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')} (Custom).png");
+                imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')} (Custom).png";
             }
+            pokemonImage.ImageLocation = imagePath;
         }
 
         private void leftScroll_Click(object sender, EventArgs e)
@@ -76,16 +79,21 @@ namespace pokedex
             bool XYvariant = (pokemon[i].Name[pokemon[i].Name.Length - 1] != 'X' && pokemon[i].Name[pokemon[i].Name.Length - 1] != 'Y');
             if (pokemon[i].Name.Contains("Mega") && XYvariant)
             {
-                pokemonImage.ImageLocation = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Mega (Custom).png";
+                imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Mega (Custom).png";
             }
             else if (pokemon[i].Name.Contains("Mega"))
             {
-                pokemonImage.ImageLocation = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Mega-{pokemon[i].Name[pokemon[i].Name.Length - 1]} (Custom).png";
+                imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Mega-{pokemon[i].Name[pokemon[i].Name.Length - 1]} (Custom).png";
+            }
+            else if (pokemon[i].Name.Contains("Alola"))
+            {
+                imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Alola (Custom).png";
             }
             else
             {
-                pokemonImage.Image = Image.FromFile($"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')} (Custom).png");
+                imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')} (Custom).png";
             }
+            pokemonImage.ImageLocation = imagePath;
         }
     }
 }
