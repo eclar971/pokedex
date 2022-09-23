@@ -16,5 +16,11 @@ namespace pokedex
         {
             InitializeComponent();
         }
+
+        private void scollerSceen_Load(object sender, EventArgs e)
+        {
+            List<Pokemon> pokemon = new List<Pokemon>();
+            pokemon = SqliteDataAccess.LoadPokemon();
+        }
     }
 }
