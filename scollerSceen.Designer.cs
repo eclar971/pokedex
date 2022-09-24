@@ -95,6 +95,7 @@
             this.Name = "scollerSceen";
             this.Size = new System.Drawing.Size(430, 457);
             this.Load += new System.EventHandler(this.scollerSceen_Load);
+            this.VisibleChanged += new System.EventHandler(this.scollerSceen_Visable);
             ((System.ComponentModel.ISupportInitialize)(this.pokemonImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

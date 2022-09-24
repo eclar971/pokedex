@@ -187,6 +187,7 @@
             this.Name = "statsScreen";
             this.Size = new System.Drawing.Size(430, 457);
             this.Load += new System.EventHandler(this.statsScreen_Load);
+            this.VisibleChanged += new System.EventHandler(this.statsScreen_Visable);
             ((System.ComponentModel.ISupportInitialize)(this.statsPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
