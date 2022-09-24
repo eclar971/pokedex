@@ -13,9 +13,9 @@ namespace pokedex
 {
     public partial class scollerSceen : UserControl
     {
-        public List<Pokemon> pokemon = new List<Pokemon>();
-        public int i = 0;
-        public string imagePath = "";
+        public static List<Pokemon> pokemon = new List<Pokemon>();
+        public static int i = 0;
+        public static string imagePath = "";
         public scollerSceen()
         {
             InitializeComponent();
