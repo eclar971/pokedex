@@ -22,7 +22,21 @@ namespace pokedex
                 return output.ToList();
             }
         }
-
+        public static List<Data> LoadUserData()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<Data>("select * from caughtSeen", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+        public static void SaveUserData(Data data)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute($"INSERT INTO \"main\".\"caughtSeen\"(\"where\",\"when\",\"nickname\",\"shiny\",\"pokemon\") VALUES (\"{data.where}\",\"{data.when}\",\"{data.nickname}\",\"{data.shiny}\",\"{data.pokemon}\");");
+            }
+        }
         public static void SavePokemon(Pokemon pokemon)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -35,6 +49,14 @@ namespace pokedex
         {
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
+    }
+    public class Data
+    {
+        public string nickname { get; set; }
+        public string where { get; set; }
+        public string shiny { get; set; }
+        public string when { get; set; }
+        public string pokemon { get; set; }
     }
     public class Pokemon
     {

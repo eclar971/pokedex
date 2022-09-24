@@ -30,13 +30,14 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.caughtNicknameLabel = new System.Windows.Forms.Label();
-            this.caughtNickname = new CustomControls.RJControls.RJTextBox();
             this.whereCaughtLabel = new System.Windows.Forms.Label();
-            this.whereCaught = new CustomControls.RJControls.RJTextBox();
             this.isShinnyLabel = new System.Windows.Forms.Label();
-            this.isShinny = new CustomControls.RJControls.RJTextBox();
             this.whenCaughtLabel = new System.Windows.Forms.Label();
+            this.caughtNickname = new CustomControls.RJControls.RJTextBox();
+            this.whereCaught = new CustomControls.RJControls.RJTextBox();
+            this.isShinny = new CustomControls.RJControls.RJTextBox();
             this.whenCaught = new CustomControls.RJControls.RJTextBox();
+            this.saveCaught = new CustomControls.RJControls.RJButton();
             this.caughtPokemonPic = new CustomControls.RJControls.RJCircularPictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.caughtPokemonPic)).BeginInit();
@@ -52,10 +53,12 @@
             this.flowLayoutPanel1.Controls.Add(this.isShinny);
             this.flowLayoutPanel1.Controls.Add(this.whenCaughtLabel);
             this.flowLayoutPanel1.Controls.Add(this.whenCaught);
+            this.flowLayoutPanel1.Controls.Add(this.saveCaught);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 238);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(430, 216);
             this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // caughtNicknameLabel
             // 
@@ -67,6 +70,39 @@
             this.caughtNicknameLabel.Size = new System.Drawing.Size(164, 17);
             this.caughtNicknameLabel.TabIndex = 1;
             this.caughtNicknameLabel.Text = "Please enter a nickname";
+            // 
+            // whereCaughtLabel
+            // 
+            this.whereCaughtLabel.AutoSize = true;
+            this.whereCaughtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.whereCaughtLabel.ForeColor = System.Drawing.Color.White;
+            this.whereCaughtLabel.Location = new System.Drawing.Point(3, 40);
+            this.whereCaughtLabel.Name = "whereCaughtLabel";
+            this.whereCaughtLabel.Size = new System.Drawing.Size(215, 17);
+            this.whereCaughtLabel.TabIndex = 2;
+            this.whereCaughtLabel.Text = "Please enter where you caught it";
+            // 
+            // isShinnyLabel
+            // 
+            this.isShinnyLabel.AutoSize = true;
+            this.isShinnyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isShinnyLabel.ForeColor = System.Drawing.Color.White;
+            this.isShinnyLabel.Location = new System.Drawing.Point(3, 97);
+            this.isShinnyLabel.Name = "isShinnyLabel";
+            this.isShinnyLabel.Size = new System.Drawing.Size(174, 17);
+            this.isShinnyLabel.TabIndex = 4;
+            this.isShinnyLabel.Text = "Enter whether shiny or not";
+            // 
+            // whenCaughtLabel
+            // 
+            this.whenCaughtLabel.AutoSize = true;
+            this.whenCaughtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.whenCaughtLabel.ForeColor = System.Drawing.Color.White;
+            this.whenCaughtLabel.Location = new System.Drawing.Point(3, 154);
+            this.whenCaughtLabel.Name = "whenCaughtLabel";
+            this.whenCaughtLabel.Size = new System.Drawing.Size(263, 17);
+            this.whenCaughtLabel.TabIndex = 6;
+            this.whenCaughtLabel.Text = "enter when you caught it (MM/DD/YYYY)";
             // 
             // caughtNickname
             // 
@@ -86,17 +122,7 @@
             this.caughtNickname.TabIndex = 0;
             this.caughtNickname.Texts = "";
             this.caughtNickname.UnderlinedStyle = false;
-            // 
-            // whereCaughtLabel
-            // 
-            this.whereCaughtLabel.AutoSize = true;
-            this.whereCaughtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whereCaughtLabel.ForeColor = System.Drawing.Color.White;
-            this.whereCaughtLabel.Location = new System.Drawing.Point(3, 40);
-            this.whereCaughtLabel.Name = "whereCaughtLabel";
-            this.whereCaughtLabel.Size = new System.Drawing.Size(215, 17);
-            this.whereCaughtLabel.TabIndex = 2;
-            this.whereCaughtLabel.Text = "Please enter where you caught it";
+            this.caughtNickname._TextChanged += new System.EventHandler(this.caughtNickname__TextChanged);
             // 
             // whereCaught
             // 
@@ -116,17 +142,7 @@
             this.whereCaught.TabIndex = 3;
             this.whereCaught.Texts = "";
             this.whereCaught.UnderlinedStyle = false;
-            // 
-            // isShinnyLabel
-            // 
-            this.isShinnyLabel.AutoSize = true;
-            this.isShinnyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.isShinnyLabel.ForeColor = System.Drawing.Color.White;
-            this.isShinnyLabel.Location = new System.Drawing.Point(3, 97);
-            this.isShinnyLabel.Name = "isShinnyLabel";
-            this.isShinnyLabel.Size = new System.Drawing.Size(174, 17);
-            this.isShinnyLabel.TabIndex = 4;
-            this.isShinnyLabel.Text = "Enter whether shiny or not";
+            this.whereCaught._TextChanged += new System.EventHandler(this.whereCaught__TextChanged);
             // 
             // isShinny
             // 
@@ -146,17 +162,7 @@
             this.isShinny.TabIndex = 5;
             this.isShinny.Texts = "";
             this.isShinny.UnderlinedStyle = false;
-            // 
-            // whenCaughtLabel
-            // 
-            this.whenCaughtLabel.AutoSize = true;
-            this.whenCaughtLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whenCaughtLabel.ForeColor = System.Drawing.Color.White;
-            this.whenCaughtLabel.Location = new System.Drawing.Point(3, 154);
-            this.whenCaughtLabel.Name = "whenCaughtLabel";
-            this.whenCaughtLabel.Size = new System.Drawing.Size(263, 17);
-            this.whenCaughtLabel.TabIndex = 6;
-            this.whenCaughtLabel.Text = "enter when you caught it (MM/DD/YYYY)";
+            this.isShinny._TextChanged += new System.EventHandler(this.isShinny__TextChanged);
             // 
             // whenCaught
             // 
@@ -176,6 +182,26 @@
             this.whenCaught.TabIndex = 7;
             this.whenCaught.Texts = "";
             this.whenCaught.UnderlinedStyle = false;
+            this.whenCaught._TextChanged += new System.EventHandler(this.whenCaught__TextChanged);
+            // 
+            // saveCaught
+            // 
+            this.saveCaught.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.saveCaught.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.saveCaught.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.saveCaught.BorderRadius = 0;
+            this.saveCaught.BorderSize = 0;
+            this.saveCaught.FlatAppearance.BorderSize = 0;
+            this.saveCaught.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.saveCaught.ForeColor = System.Drawing.Color.White;
+            this.saveCaught.Location = new System.Drawing.Point(261, 174);
+            this.saveCaught.Name = "saveCaught";
+            this.saveCaught.Size = new System.Drawing.Size(150, 40);
+            this.saveCaught.TabIndex = 2;
+            this.saveCaught.Text = "Save";
+            this.saveCaught.TextColor = System.Drawing.Color.White;
+            this.saveCaught.UseVisualStyleBackColor = false;
+            this.saveCaught.Click += new System.EventHandler(this.saveCaught_Click);
             // 
             // caughtPokemonPic
             // 
@@ -191,6 +217,8 @@
             this.caughtPokemonPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.caughtPokemonPic.TabIndex = 0;
             this.caughtPokemonPic.TabStop = false;
+            this.caughtPokemonPic.VisibleChanged += new System.EventHandler(this.caughtScreen_Visble);
+            this.caughtPokemonPic.Click += new System.EventHandler(this.caughtPokemonPic_Click);
             // 
             // caughtScreen
             // 
@@ -220,5 +248,6 @@
         private CustomControls.RJControls.RJTextBox isShinny;
         private System.Windows.Forms.Label whenCaughtLabel;
         private CustomControls.RJControls.RJTextBox whenCaught;
+        private CustomControls.RJControls.RJButton saveCaught;
     }
 }
