@@ -35,6 +35,7 @@
             this.isShinnySeen = new CustomControls.RJControls.RJTextBox();
             this.whenSeenLabel = new System.Windows.Forms.Label();
             this.whenSeen = new CustomControls.RJControls.RJTextBox();
+            this.saveSeen = new CustomControls.RJControls.RJButton();
             this.seenPokemonPic = new CustomControls.RJControls.RJCircularPictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.seenPokemonPic)).BeginInit();
@@ -48,10 +49,12 @@
             this.flowLayoutPanel1.Controls.Add(this.isShinnySeen);
             this.flowLayoutPanel1.Controls.Add(this.whenSeenLabel);
             this.flowLayoutPanel1.Controls.Add(this.whenSeen);
+            this.flowLayoutPanel1.Controls.Add(this.saveSeen);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 238);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(430, 216);
             this.flowLayoutPanel1.TabIndex = 3;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // whereSeenLabel
             // 
@@ -82,6 +85,7 @@
             this.whereSeen.TabIndex = 3;
             this.whereSeen.Texts = "";
             this.whereSeen.UnderlinedStyle = false;
+            this.whereSeen._TextChanged += new System.EventHandler(this.whereSeen__TextChanged);
             // 
             // isShinnyLabelSeen
             // 
@@ -112,6 +116,7 @@
             this.isShinnySeen.TabIndex = 5;
             this.isShinnySeen.Texts = "";
             this.isShinnySeen.UnderlinedStyle = false;
+            this.isShinnySeen._TextChanged += new System.EventHandler(this.isShinnySeen__TextChanged);
             // 
             // whenSeenLabel
             // 
@@ -120,9 +125,9 @@
             this.whenSeenLabel.ForeColor = System.Drawing.Color.White;
             this.whenSeenLabel.Location = new System.Drawing.Point(3, 114);
             this.whenSeenLabel.Name = "whenSeenLabel";
-            this.whenSeenLabel.Size = new System.Drawing.Size(251, 17);
+            this.whenSeenLabel.Size = new System.Drawing.Size(244, 17);
             this.whenSeenLabel.TabIndex = 8;
-            this.whenSeenLabel.Text = "enter when you seen it (MM/DD/YYYY)";
+            this.whenSeenLabel.Text = "enter when you saw it (MM/DD/YYYY)";
             // 
             // whenSeen
             // 
@@ -142,6 +147,26 @@
             this.whenSeen.TabIndex = 9;
             this.whenSeen.Texts = "";
             this.whenSeen.UnderlinedStyle = false;
+            this.whenSeen._TextChanged += new System.EventHandler(this.whenSeen__TextChanged);
+            // 
+            // saveSeen
+            // 
+            this.saveSeen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.saveSeen.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.saveSeen.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.saveSeen.BorderRadius = 0;
+            this.saveSeen.BorderSize = 0;
+            this.saveSeen.FlatAppearance.BorderSize = 0;
+            this.saveSeen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.saveSeen.ForeColor = System.Drawing.Color.White;
+            this.saveSeen.Location = new System.Drawing.Point(261, 134);
+            this.saveSeen.Name = "saveSeen";
+            this.saveSeen.Size = new System.Drawing.Size(150, 40);
+            this.saveSeen.TabIndex = 10;
+            this.saveSeen.Text = "Save";
+            this.saveSeen.TextColor = System.Drawing.Color.White;
+            this.saveSeen.UseVisualStyleBackColor = false;
+            this.saveSeen.Click += new System.EventHandler(this.saveSeen_Click);
             // 
             // seenPokemonPic
             // 
@@ -167,6 +192,8 @@
             this.Controls.Add(this.seenPokemonPic);
             this.Name = "seenScreen";
             this.Size = new System.Drawing.Size(430, 457);
+            this.Load += new System.EventHandler(this.seenScreen_Load);
+            this.VisibleChanged += new System.EventHandler(this.seenScreen_Visble);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.seenPokemonPic)).EndInit();
@@ -184,5 +211,6 @@
         private CustomControls.RJControls.RJCircularPictureBox seenPokemonPic;
         private System.Windows.Forms.Label whenSeenLabel;
         private CustomControls.RJControls.RJTextBox whenSeen;
+        private CustomControls.RJControls.RJButton saveSeen;
     }
 }
