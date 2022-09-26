@@ -34,13 +34,13 @@
             this.hpChange = new System.Windows.Forms.Label();
             this.specialDefenseChange = new System.Windows.Forms.Label();
             this.defenseChange = new System.Windows.Forms.Label();
+            this.speStat = new CustomControls.RJControls.RJTextBox();
+            this.spAtkStat = new CustomControls.RJControls.RJTextBox();
+            this.atkStat = new CustomControls.RJControls.RJTextBox();
+            this.spDefStat = new CustomControls.RJControls.RJTextBox();
+            this.defStat = new CustomControls.RJControls.RJTextBox();
+            this.hpStat = new CustomControls.RJControls.RJTextBox();
             this.changeStatsPic = new CustomControls.RJControls.RJCircularPictureBox();
-            this.rjTextBox6 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox1 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox3 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox4 = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox5 = new CustomControls.RJControls.RJTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.changeStatsPic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,6 +110,126 @@
             this.defenseChange.TabIndex = 14;
             this.defenseChange.Text = "Defense:";
             // 
+            // speStat
+            // 
+            this.speStat.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.speStat.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.speStat.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.speStat.BorderSize = 2;
+            this.speStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.speStat.ForeColor = System.Drawing.Color.DimGray;
+            this.speStat.Location = new System.Drawing.Point(331, 388);
+            this.speStat.Margin = new System.Windows.Forms.Padding(4);
+            this.speStat.Multiline = false;
+            this.speStat.Name = "speStat";
+            this.speStat.Padding = new System.Windows.Forms.Padding(7);
+            this.speStat.PasswordChar = false;
+            this.speStat.Size = new System.Drawing.Size(90, 31);
+            this.speStat.TabIndex = 30;
+            this.speStat.Texts = "";
+            this.speStat.UnderlinedStyle = false;
+            this.speStat._TextChanged += new System.EventHandler(this.speStat__TextChanged);
+            // 
+            // spAtkStat
+            // 
+            this.spAtkStat.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.spAtkStat.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.spAtkStat.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.spAtkStat.BorderSize = 2;
+            this.spAtkStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spAtkStat.ForeColor = System.Drawing.Color.DimGray;
+            this.spAtkStat.Location = new System.Drawing.Point(335, 315);
+            this.spAtkStat.Margin = new System.Windows.Forms.Padding(4);
+            this.spAtkStat.Multiline = false;
+            this.spAtkStat.Name = "spAtkStat";
+            this.spAtkStat.Padding = new System.Windows.Forms.Padding(7);
+            this.spAtkStat.PasswordChar = false;
+            this.spAtkStat.Size = new System.Drawing.Size(90, 31);
+            this.spAtkStat.TabIndex = 29;
+            this.spAtkStat.Texts = "";
+            this.spAtkStat.UnderlinedStyle = false;
+            this.spAtkStat._TextChanged += new System.EventHandler(this.spAtkStat__TextChanged);
+            // 
+            // atkStat
+            // 
+            this.atkStat.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.atkStat.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.atkStat.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.atkStat.BorderSize = 2;
+            this.atkStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.atkStat.ForeColor = System.Drawing.Color.DimGray;
+            this.atkStat.Location = new System.Drawing.Point(329, 240);
+            this.atkStat.Margin = new System.Windows.Forms.Padding(4);
+            this.atkStat.Multiline = false;
+            this.atkStat.Name = "atkStat";
+            this.atkStat.Padding = new System.Windows.Forms.Padding(7);
+            this.atkStat.PasswordChar = false;
+            this.atkStat.Size = new System.Drawing.Size(90, 31);
+            this.atkStat.TabIndex = 28;
+            this.atkStat.Texts = "";
+            this.atkStat.UnderlinedStyle = false;
+            this.atkStat._TextChanged += new System.EventHandler(this.atkStat__TextChanged);
+            // 
+            // spDefStat
+            // 
+            this.spDefStat.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.spDefStat.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.spDefStat.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.spDefStat.BorderSize = 2;
+            this.spDefStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spDefStat.ForeColor = System.Drawing.Color.DimGray;
+            this.spDefStat.Location = new System.Drawing.Point(116, 388);
+            this.spDefStat.Margin = new System.Windows.Forms.Padding(4);
+            this.spDefStat.Multiline = false;
+            this.spDefStat.Name = "spDefStat";
+            this.spDefStat.Padding = new System.Windows.Forms.Padding(7);
+            this.spDefStat.PasswordChar = false;
+            this.spDefStat.Size = new System.Drawing.Size(90, 31);
+            this.spDefStat.TabIndex = 27;
+            this.spDefStat.Texts = "";
+            this.spDefStat.UnderlinedStyle = false;
+            this.spDefStat._TextChanged += new System.EventHandler(this.spDefStat__TextChanged);
+            // 
+            // defStat
+            // 
+            this.defStat.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.defStat.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.defStat.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.defStat.BorderSize = 2;
+            this.defStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.defStat.ForeColor = System.Drawing.Color.DimGray;
+            this.defStat.Location = new System.Drawing.Point(122, 315);
+            this.defStat.Margin = new System.Windows.Forms.Padding(4);
+            this.defStat.Multiline = false;
+            this.defStat.Name = "defStat";
+            this.defStat.Padding = new System.Windows.Forms.Padding(7);
+            this.defStat.PasswordChar = false;
+            this.defStat.Size = new System.Drawing.Size(90, 31);
+            this.defStat.TabIndex = 26;
+            this.defStat.Texts = "";
+            this.defStat.UnderlinedStyle = false;
+            this.defStat._TextChanged += new System.EventHandler(this.defStat__TextChanged);
+            // 
+            // hpStat
+            // 
+            this.hpStat.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.hpStat.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.hpStat.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.hpStat.BorderSize = 2;
+            this.hpStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hpStat.ForeColor = System.Drawing.Color.DimGray;
+            this.hpStat.Location = new System.Drawing.Point(87, 240);
+            this.hpStat.Margin = new System.Windows.Forms.Padding(4);
+            this.hpStat.Multiline = false;
+            this.hpStat.Name = "hpStat";
+            this.hpStat.Padding = new System.Windows.Forms.Padding(7);
+            this.hpStat.PasswordChar = false;
+            this.hpStat.Size = new System.Drawing.Size(90, 31);
+            this.hpStat.TabIndex = 25;
+            this.hpStat.Texts = "";
+            this.hpStat.UnderlinedStyle = false;
+            this.hpStat._TextChanged += new System.EventHandler(this.hpStat_Change);
+            // 
             // changeStatsPic
             // 
             this.changeStatsPic.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
@@ -126,131 +246,17 @@
             this.changeStatsPic.TabStop = false;
             this.changeStatsPic.Click += new System.EventHandler(this.rjCircularPictureBox1_Click);
             // 
-            // rjTextBox6
-            // 
-            this.rjTextBox6.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox6.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox6.BorderSize = 2;
-            this.rjTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox6.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox6.Location = new System.Drawing.Point(87, 240);
-            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox6.Multiline = false;
-            this.rjTextBox6.Name = "rjTextBox6";
-            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox6.PasswordChar = false;
-            this.rjTextBox6.Size = new System.Drawing.Size(90, 31);
-            this.rjTextBox6.TabIndex = 25;
-            this.rjTextBox6.Texts = "";
-            this.rjTextBox6.UnderlinedStyle = false;
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox1.Location = new System.Drawing.Point(122, 315);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.Size = new System.Drawing.Size(90, 31);
-            this.rjTextBox1.TabIndex = 26;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            // 
-            // rjTextBox2
-            // 
-            this.rjTextBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox2.Location = new System.Drawing.Point(116, 388);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.Size = new System.Drawing.Size(90, 31);
-            this.rjTextBox2.TabIndex = 27;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
-            // 
-            // rjTextBox3
-            // 
-            this.rjTextBox3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox3.Location = new System.Drawing.Point(329, 240);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.Size = new System.Drawing.Size(90, 31);
-            this.rjTextBox3.TabIndex = 28;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = false;
-            // 
-            // rjTextBox4
-            // 
-            this.rjTextBox4.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox4.Location = new System.Drawing.Point(335, 315);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.Size = new System.Drawing.Size(90, 31);
-            this.rjTextBox4.TabIndex = 29;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = false;
-            // 
-            // rjTextBox5
-            // 
-            this.rjTextBox5.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox5.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjTextBox5.BorderSize = 2;
-            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox5.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox5.Location = new System.Drawing.Point(331, 388);
-            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox5.Multiline = false;
-            this.rjTextBox5.Name = "rjTextBox5";
-            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.Size = new System.Drawing.Size(90, 31);
-            this.rjTextBox5.TabIndex = 30;
-            this.rjTextBox5.Texts = "";
-            this.rjTextBox5.UnderlinedStyle = false;
-            // 
             // changeStatsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Controls.Add(this.rjTextBox5);
-            this.Controls.Add(this.rjTextBox4);
-            this.Controls.Add(this.rjTextBox3);
-            this.Controls.Add(this.rjTextBox2);
-            this.Controls.Add(this.rjTextBox1);
-            this.Controls.Add(this.rjTextBox6);
+            this.Controls.Add(this.speStat);
+            this.Controls.Add(this.spAtkStat);
+            this.Controls.Add(this.atkStat);
+            this.Controls.Add(this.spDefStat);
+            this.Controls.Add(this.defStat);
+            this.Controls.Add(this.hpStat);
             this.Controls.Add(this.attackChange);
             this.Controls.Add(this.speedChange);
             this.Controls.Add(this.specialAttackChange);
@@ -260,6 +266,8 @@
             this.Controls.Add(this.changeStatsPic);
             this.Name = "changeStatsScreen";
             this.Size = new System.Drawing.Size(430, 457);
+            this.Load += new System.EventHandler(this.changeStatsScreen_Load);
+            this.VisibleChanged += new System.EventHandler(this.changeStatsScreen_Visable);
             ((System.ComponentModel.ISupportInitialize)(this.changeStatsPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -275,11 +283,11 @@
         private System.Windows.Forms.Label specialDefenseChange;
         private System.Windows.Forms.Label defenseChange;
         private CustomControls.RJControls.RJCircularPictureBox changeStatsPic;
-        private CustomControls.RJControls.RJTextBox rjTextBox6;
-        private CustomControls.RJControls.RJTextBox rjTextBox1;
-        private CustomControls.RJControls.RJTextBox rjTextBox2;
-        private CustomControls.RJControls.RJTextBox rjTextBox3;
-        private CustomControls.RJControls.RJTextBox rjTextBox4;
-        private CustomControls.RJControls.RJTextBox rjTextBox5;
+        private CustomControls.RJControls.RJTextBox hpStat;
+        private CustomControls.RJControls.RJTextBox defStat;
+        private CustomControls.RJControls.RJTextBox spDefStat;
+        private CustomControls.RJControls.RJTextBox atkStat;
+        private CustomControls.RJControls.RJTextBox spAtkStat;
+        private CustomControls.RJControls.RJTextBox speStat;
     }
 }

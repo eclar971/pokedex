@@ -22,6 +22,14 @@ namespace pokedex
         }
         private void statsScreen_Visable(object sender, EventArgs e)
         {
+            int total = 0;
+            total += scollerSceen.pokemon[scollerSceen.i].HP;
+            total += scollerSceen.pokemon[scollerSceen.i].Attack;
+            total += scollerSceen.pokemon[scollerSceen.i].Defense;
+            total += scollerSceen.pokemon[scollerSceen.i].SpecialAttack;
+            total += scollerSceen.pokemon[scollerSceen.i].SpecialDefense;
+            total += scollerSceen.pokemon[scollerSceen.i].Speed;
+            scollerSceen.pokemon[scollerSceen.i].Total = total;
             statsPic.ImageLocation = scollerSceen.imagePath;
             name.Text = "Name: " + scollerSceen.pokemon[scollerSceen.i].Name;
             number.Text = "Number: " + scollerSceen.pokemon[scollerSceen.i].Num.ToString();
