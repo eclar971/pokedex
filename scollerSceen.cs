@@ -23,14 +23,49 @@ namespace pokedex
 
         private void scollerSceen_Load(object sender, EventArgs e)
         {
-            pokemon = SqliteDataAccess.LoadPokemon();
-            pokemonInfo.Text = pokemon[i].ToString();
-            imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')} (Custom).png";
-            pokemonImage.Image = Image.FromFile(imagePath);
+            try
+            {
+                pokemon = SqliteDataAccess.LoadPokemon();
+                pokemonInfo.Text = pokemon[i].ToString();
+                imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')} (Custom).png";
+                pokemonImage.Image = Image.FromFile(imagePath);
+            }
+            catch (Exception exc)
+            {
+                pokemon = new List<Pokemon>();
+                var pokeBase = new Pokemon();
+                pokeBase.Attack = 0;
+                pokeBase.HP = 0;
+                pokeBase.Defense = 0;
+                pokeBase.SpecialDefense = 0;
+                pokeBase.SpecialAttack = 0;
+                pokeBase.Speed = 0;
+                pokeBase.Num = 1;
+                pokemon.Add(pokeBase);
+                pokemonInfo.Text = pokemon[i].ToString();
+                imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')} (Custom).png";
+                pokemonImage.Image = Image.FromFile(imagePath);
+            }
         }
         private void scollerSceen_Visable(object sender, EventArgs e)
         {
-            pokemon = SqliteDataAccess.LoadPokemon();
+            try
+            {
+                pokemon = SqliteDataAccess.LoadPokemon();
+            }
+            catch (Exception exc)
+            {
+                pokemon = new List<Pokemon>();
+                var pokeBase = new Pokemon();
+                pokeBase.Attack = 0;
+                pokeBase.HP = 0;
+                pokeBase.Defense = 0;
+                pokeBase.SpecialDefense = 0;
+                pokeBase.SpecialAttack = 0;
+                pokeBase.Speed = 0;
+                pokeBase.Num = 1;
+                pokemon.Add(pokeBase);
+            }
         }
 
         private void pokemonInfo_Click(object sender, EventArgs e)

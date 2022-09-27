@@ -16,10 +16,27 @@ namespace pokedex
     {
         public static List<Pokemon> LoadPokemon()
         {
-            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            try
             {
-                var output = cnn.Query<Pokemon>("select * from PokeDex", new DynamicParameters());
-                return output.ToList();
+                using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+                {
+                    var output = cnn.Query<Pokemon>("select * from PokeDex", new DynamicParameters());
+                    return output.ToList();
+                }
+            }
+            catch (Exception exc)
+            {
+                var pokemon = new List<Pokemon>();
+                var pokeBase = new Pokemon();
+                pokeBase.Attack = 0;
+                pokeBase.HP = 0;
+                pokeBase.Defense = 0;
+                pokeBase.SpecialDefense = 0;
+                pokeBase.SpecialAttack = 0;
+                pokeBase.Speed = 0;
+                pokeBase.Num = 1;
+                pokemon.Add(pokeBase);
+                return pokemon;
             }
         }
         public static List<Data> LoadUserData()
@@ -47,7 +64,8 @@ namespace pokedex
 
         private static string LoadConnectionString(string id = "Default")
         {
-            return ConfigurationManager.ConnectionStrings[id].ConnectionString;
+            string conString = "Data Source=.\\PokeDex.db;Version=3";
+            return conString;
         }
     }
     public class Data

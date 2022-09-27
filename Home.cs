@@ -24,5 +24,10 @@ namespace pokedex
             dashboard.ShowDialog();
             this.Close();
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

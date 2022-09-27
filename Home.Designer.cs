@@ -61,6 +61,7 @@
             this.MaximizeBox = false;
             this.Name = "Home";
             this.Text = "pokedex closed";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
 
         }
