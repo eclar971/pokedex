@@ -60,7 +60,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Home";
-            this.Text = "Form1";
+            this.Text = "pokedex closed";
             this.ResumeLayout(false);
 
         }
