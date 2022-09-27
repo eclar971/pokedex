@@ -23,6 +23,7 @@ namespace pokedex
 
         private void scollerSceen_Load(object sender, EventArgs e)
         {
+            pokemon = SqliteDataAccess.LoadPokemon();
             pokemonInfo.Text = pokemon[i].ToString();
             imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')} (Custom).png";
             pokemonImage.Image = Image.FromFile(imagePath);
