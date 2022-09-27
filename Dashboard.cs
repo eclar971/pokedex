@@ -118,5 +118,10 @@ namespace pokedex
             scollerSceen1.Hide();
             removePokemon1.BringToFront();
         }
+
+        private void rightScroll_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

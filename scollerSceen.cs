@@ -43,7 +43,7 @@ namespace pokedex
                 pokeBase.Num = 1;
                 pokemon.Add(pokeBase);
                 pokemonInfo.Text = pokemon[i].ToString();
-                imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')} (Custom).png";
+                imagePath = "C:\\Users\\Administrator\\source\\repos\\pokedex\\pokeImg\\001 (Custom).png";
                 pokemonImage.Image = Image.FromFile(imagePath);
             }
         }

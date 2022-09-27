@@ -2080,6 +2080,7 @@
     <Content Include="pokeImg\904.png" />
     <Content Include="pokeImg\905 %28Custom%29.png" />
     <Content Include="pokeImg\905.png" />
+    <Content Include="SQLite.Interop.dll" />
     <EmbeddedResource Include="addPokemon.resx">
       <DependentUpon>addPokemon.cs</DependentUpon>
     </EmbeddedResource>

@@ -46,6 +46,7 @@
             this.changeStatsScreen1 = new pokedex.changeStatsScreen();
             this.addPokemon1 = new pokedex.addPokemon();
             this.removePokemon1 = new pokedex.removePokemon();
+            this.rightScroll = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -296,22 +297,36 @@
             this.removePokemon1.TabIndex = 11;
             this.removePokemon1.Visible = false;
             // 
+            // rightScroll
+            // 
+            this.rightScroll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rightScroll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.rightScroll.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.rightScroll.IconColor = System.Drawing.Color.Black;
+            this.rightScroll.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.rightScroll.Location = new System.Drawing.Point(279, 5);
+            this.rightScroll.Name = "rightScroll";
+            this.rightScroll.Size = new System.Drawing.Size(50, 50);
+            this.rightScroll.TabIndex = 12;
+            this.rightScroll.UseVisualStyleBackColor = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.removePokemon1);
-            this.Controls.Add(this.addPokemon1);
-            this.Controls.Add(this.statsScreen1);
-            this.Controls.Add(this.scollerSceen1);
+            this.Controls.Add(this.rightScroll);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.scollerSceen1);
             this.Controls.Add(this.caughtScreen1);
             this.Controls.Add(this.seenScreen1);
             this.Controls.Add(this.changeStatsScreen1);
+            this.Controls.Add(this.removePokemon1);
+            this.Controls.Add(this.addPokemon1);
+            this.Controls.Add(this.statsScreen1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Dashboard";
@@ -341,5 +356,6 @@
         private changeStatsScreen changeStatsScreen1;
         private addPokemon addPokemon1;
         private removePokemon removePokemon1;
+        private FontAwesome.Sharp.IconButton rightScroll;
     }
 }
