@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.rightScroll = new FontAwesome.Sharp.IconButton();
+            this.closeButton = new CustomControls.RJControls.RJButton();
             this.scrollPokemon = new CustomControls.RJControls.RJButton();
             this.markCaught = new CustomControls.RJControls.RJButton();
             this.markSeen = new CustomControls.RJControls.RJButton();
@@ -38,15 +40,13 @@
             this.editStats = new CustomControls.RJControls.RJButton();
             this.addPokemon = new CustomControls.RJControls.RJButton();
             this.removePokemon = new CustomControls.RJControls.RJButton();
-            this.caughtScreen1 = new pokedex.caughtScreen();
-            this.closeButton = new CustomControls.RJControls.RJButton();
-            this.seenScreen1 = new pokedex.seenScreen();
             this.scollerSceen1 = new pokedex.scollerSceen();
-            this.statsScreen1 = new pokedex.statsScreen();
+            this.caughtScreen1 = new pokedex.caughtScreen();
+            this.seenScreen1 = new pokedex.seenScreen();
             this.changeStatsScreen1 = new pokedex.changeStatsScreen();
-            this.addPokemon1 = new pokedex.addPokemon();
             this.removePokemon1 = new pokedex.removePokemon();
-            this.rightScroll = new FontAwesome.Sharp.IconButton();
+            this.addPokemon1 = new pokedex.addPokemon();
+            this.statsScreen1 = new pokedex.statsScreen();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +73,38 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(332, 338);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // rightScroll
+            // 
+            this.rightScroll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rightScroll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.rightScroll.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.rightScroll.IconColor = System.Drawing.Color.Black;
+            this.rightScroll.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.rightScroll.Location = new System.Drawing.Point(279, 5);
+            this.rightScroll.Name = "rightScroll";
+            this.rightScroll.Size = new System.Drawing.Size(50, 50);
+            this.rightScroll.TabIndex = 12;
+            this.rightScroll.UseVisualStyleBackColor = false;
+            this.rightScroll.Click += new System.EventHandler(this.rightScroll_Click_1);
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.closeButton.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.closeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.closeButton.BorderRadius = 45;
+            this.closeButton.BorderSize = 0;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.Location = new System.Drawing.Point(5, 5);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(90, 90);
+            this.closeButton.TabIndex = 2;
+            this.closeButton.TextColor = System.Drawing.Color.White;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // scrollPokemon
             // 
@@ -214,43 +246,6 @@
             this.removePokemon.UseVisualStyleBackColor = false;
             this.removePokemon.Click += new System.EventHandler(this.removePokemon_Click);
             // 
-            // caughtScreen1
-            // 
-            this.caughtScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.caughtScreen1.Location = new System.Drawing.Point(339, 5);
-            this.caughtScreen1.Name = "caughtScreen1";
-            this.caughtScreen1.Size = new System.Drawing.Size(430, 457);
-            this.caughtScreen1.TabIndex = 7;
-            this.caughtScreen1.Visible = false;
-            this.caughtScreen1.Load += new System.EventHandler(this.caughtScreen1_Load);
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.closeButton.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            this.closeButton.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.closeButton.BorderRadius = 45;
-            this.closeButton.BorderSize = 0;
-            this.closeButton.FlatAppearance.BorderSize = 0;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.ForeColor = System.Drawing.Color.White;
-            this.closeButton.Location = new System.Drawing.Point(5, 5);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(90, 90);
-            this.closeButton.TabIndex = 2;
-            this.closeButton.TextColor = System.Drawing.Color.White;
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
-            // seenScreen1
-            // 
-            this.seenScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.seenScreen1.Location = new System.Drawing.Point(339, 5);
-            this.seenScreen1.Name = "seenScreen1";
-            this.seenScreen1.Size = new System.Drawing.Size(430, 457);
-            this.seenScreen1.TabIndex = 7;
-            this.seenScreen1.Visible = false;
-            // 
             // scollerSceen1
             // 
             this.scollerSceen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -261,14 +256,24 @@
             this.scollerSceen1.Visible = false;
             this.scollerSceen1.Load += new System.EventHandler(this.scollerSceen1_Load);
             // 
-            // statsScreen1
+            // caughtScreen1
             // 
-            this.statsScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.statsScreen1.Location = new System.Drawing.Point(339, 5);
-            this.statsScreen1.Name = "statsScreen1";
-            this.statsScreen1.Size = new System.Drawing.Size(430, 457);
-            this.statsScreen1.TabIndex = 9;
-            this.statsScreen1.Visible = false;
+            this.caughtScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.caughtScreen1.Location = new System.Drawing.Point(339, 5);
+            this.caughtScreen1.Name = "caughtScreen1";
+            this.caughtScreen1.Size = new System.Drawing.Size(430, 457);
+            this.caughtScreen1.TabIndex = 7;
+            this.caughtScreen1.Visible = false;
+            this.caughtScreen1.Load += new System.EventHandler(this.caughtScreen1_Load);
+            // 
+            // seenScreen1
+            // 
+            this.seenScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.seenScreen1.Location = new System.Drawing.Point(339, 5);
+            this.seenScreen1.Name = "seenScreen1";
+            this.seenScreen1.Size = new System.Drawing.Size(430, 457);
+            this.seenScreen1.TabIndex = 7;
+            this.seenScreen1.Visible = false;
             // 
             // changeStatsScreen1
             // 
@@ -279,15 +284,6 @@
             this.changeStatsScreen1.TabIndex = 7;
             this.changeStatsScreen1.Visible = false;
             // 
-            // addPokemon1
-            // 
-            this.addPokemon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.addPokemon1.Location = new System.Drawing.Point(338, 5);
-            this.addPokemon1.Name = "addPokemon1";
-            this.addPokemon1.Size = new System.Drawing.Size(430, 457);
-            this.addPokemon1.TabIndex = 10;
-            this.addPokemon1.Visible = false;
-            // 
             // removePokemon1
             // 
             this.removePokemon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -297,18 +293,23 @@
             this.removePokemon1.TabIndex = 11;
             this.removePokemon1.Visible = false;
             // 
-            // rightScroll
+            // addPokemon1
             // 
-            this.rightScroll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rightScroll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.rightScroll.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.rightScroll.IconColor = System.Drawing.Color.Black;
-            this.rightScroll.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.rightScroll.Location = new System.Drawing.Point(279, 5);
-            this.rightScroll.Name = "rightScroll";
-            this.rightScroll.Size = new System.Drawing.Size(50, 50);
-            this.rightScroll.TabIndex = 12;
-            this.rightScroll.UseVisualStyleBackColor = false;
+            this.addPokemon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.addPokemon1.Location = new System.Drawing.Point(338, 5);
+            this.addPokemon1.Name = "addPokemon1";
+            this.addPokemon1.Size = new System.Drawing.Size(430, 457);
+            this.addPokemon1.TabIndex = 10;
+            this.addPokemon1.Visible = false;
+            // 
+            // statsScreen1
+            // 
+            this.statsScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.statsScreen1.Location = new System.Drawing.Point(339, 5);
+            this.statsScreen1.Name = "statsScreen1";
+            this.statsScreen1.Size = new System.Drawing.Size(430, 457);
+            this.statsScreen1.TabIndex = 9;
+            this.statsScreen1.Visible = false;
             // 
             // Dashboard
             // 

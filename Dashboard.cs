@@ -123,5 +123,11 @@ namespace pokedex
         {
 
         }
+
+        private void rightScroll_Click_1(object sender, EventArgs e)
+        {
+            search search = new search();
+            search.Show();
+        }
     }
 }
