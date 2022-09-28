@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -135,6 +136,18 @@ namespace pokedex
             scollerSceen1.Hide();
             search search = new search();
             search.Show();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+            PrivateFontCollection modernFont = new PrivateFontCollection();
+
+            modernFont.AddFontFile($"..\\..\\Pokemon Classic.ttf");
+            foreach (Control i in flowLayoutPanel1.Controls)
+            {
+                i.Font = new Font(modernFont.Families[0], 10); ;
+            }
         }
     }
 }

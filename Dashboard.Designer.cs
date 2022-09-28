@@ -123,6 +123,7 @@
             this.scrollPokemon.TabIndex = 0;
             this.scrollPokemon.Text = "pokemon scroller";
             this.scrollPokemon.TextColor = System.Drawing.Color.White;
+            this.scrollPokemon.UseCompatibleTextRendering = true;
             this.scrollPokemon.UseVisualStyleBackColor = false;
             this.scrollPokemon.Click += new System.EventHandler(this.scrollPokemon_Click);
             // 
@@ -143,6 +144,7 @@
             this.markCaught.TabIndex = 1;
             this.markCaught.Text = "mark as caught";
             this.markCaught.TextColor = System.Drawing.Color.White;
+            this.markCaught.UseCompatibleTextRendering = true;
             this.markCaught.UseVisualStyleBackColor = false;
             this.markCaught.Click += new System.EventHandler(this.markCaught_Click);
             // 
@@ -163,6 +165,7 @@
             this.markSeen.TabIndex = 2;
             this.markSeen.Text = "mark as seen";
             this.markSeen.TextColor = System.Drawing.Color.White;
+            this.markSeen.UseCompatibleTextRendering = true;
             this.markSeen.UseVisualStyleBackColor = false;
             this.markSeen.Click += new System.EventHandler(this.markSeen_Click);
             // 
@@ -183,6 +186,7 @@
             this.veiwStats.TabIndex = 3;
             this.veiwStats.Text = "view stats";
             this.veiwStats.TextColor = System.Drawing.Color.White;
+            this.veiwStats.UseCompatibleTextRendering = true;
             this.veiwStats.UseVisualStyleBackColor = false;
             this.veiwStats.Click += new System.EventHandler(this.veiwStats_Click);
             // 
@@ -203,6 +207,7 @@
             this.editStats.TabIndex = 4;
             this.editStats.Text = "edit stats";
             this.editStats.TextColor = System.Drawing.Color.White;
+            this.editStats.UseCompatibleTextRendering = true;
             this.editStats.UseVisualStyleBackColor = false;
             this.editStats.Click += new System.EventHandler(this.editStats_Click);
             // 
@@ -223,6 +228,7 @@
             this.addPokemon.TabIndex = 5;
             this.addPokemon.Text = "add pokemon";
             this.addPokemon.TextColor = System.Drawing.Color.White;
+            this.addPokemon.UseCompatibleTextRendering = true;
             this.addPokemon.UseVisualStyleBackColor = false;
             this.addPokemon.Click += new System.EventHandler(this.addPokemon_Click);
             // 
@@ -243,6 +249,7 @@
             this.removePokemon.TabIndex = 6;
             this.removePokemon.Text = "remove pokemon";
             this.removePokemon.TextColor = System.Drawing.Color.White;
+            this.removePokemon.UseCompatibleTextRendering = true;
             this.removePokemon.UseVisualStyleBackColor = false;
             this.removePokemon.Click += new System.EventHandler(this.removePokemon_Click);
             // 
@@ -332,6 +339,7 @@
             this.MaximizeBox = false;
             this.Name = "Dashboard";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
