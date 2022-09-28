@@ -65,6 +65,7 @@ namespace pokedex
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
+                cnn.Execute($"DELETE FROM PokeDex where Name = \"{pokemon.Name}\"");
             }
         }
 
