@@ -58,7 +58,8 @@ namespace pokedex
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("insert into Pokemon (Name,Num,Type,Total,Hp,Attack,Defense,SpecialAttack,SpecialDefense,speed) values (@Name,@Num,@Type,@Total,@Hp,@Attack,@Defense,@SpecialAttack,@SpecialDefense,@speed)", pokemon);
+                cnn.Execute($"INSERT INTO \"main\".\"PokeDex\"(\"Name\",\"Num\",\"Type\",\"Total\",\"HP\",\"Attack\",\"Defense\",\"SpecialAttack\",\"SpecialDefense\",\"Speed\") VALUES (\"{pokemon.Name}\",\"{pokemon.Num}\",\"{pokemon.Type}\",\"{pokemon.Total}\",\"{pokemon.HP}\",\"{pokemon.Attack}\",\"{pokemon.Defense}\",\"{pokemon.SpecialAttack}\",\"{pokemon.SpecialDefense}\",\"{pokemon.Speed}\")");
+                
             }
         }
         public static void DeletePokemon(Pokemon pokemon)
