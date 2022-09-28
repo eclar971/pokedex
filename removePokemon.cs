@@ -16,5 +16,20 @@ namespace pokedex
         {
             InitializeComponent();
         }
+
+        private void removePokemon_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void remove_Visable(object sender, EventArgs e)
+        {
+            removeImg.ImageLocation = scollerSceen.imagePath;
+        }
+
+        private void deletePokemon_Click(object sender, EventArgs e)
+        {
+            SqliteDataAccess.DeletePokemon(scollerSceen.pokemon[scollerSceen.i]);
+        }
     }
 }

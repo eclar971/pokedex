@@ -61,6 +61,12 @@ namespace pokedex
                 cnn.Execute("insert into Pokemon (Name,Num,Type,Total,Hp,Attack,Defense,SpecialAttack,SpecialDefense,speed) values (@Name,@Num,@Type,@Total,@Hp,@Attack,@Defense,@SpecialAttack,@SpecialDefense,@speed)", pokemon);
             }
         }
+        public static void DeletePokemon(Pokemon pokemon)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+            }
+        }
 
         private static string LoadConnectionString(string id = "Default")
         {

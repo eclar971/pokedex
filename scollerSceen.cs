@@ -43,8 +43,7 @@ namespace pokedex
                 pokeBase.Num = 1;
                 pokemon.Add(pokeBase);
                 pokemonInfo.Text = pokemon[i].ToString();
-                imagePath = "C:\\Users\\Administrator\\source\\repos\\pokedex\\pokeImg\\001 (Custom).png";
-                pokemonImage.Image = Image.FromFile(imagePath);
+                pokemonImage.Image = Image.FromFile("C:\\Users\\Administrator\\source\\repos\\pokedex\\pokeImg\\001 (Custom).png");
             }
         }
         private void scollerSceen_Visable(object sender, EventArgs e)
@@ -52,6 +51,25 @@ namespace pokedex
             try
             {
                 pokemon = SqliteDataAccess.LoadPokemon();
+                pokemonInfo.Text = pokemon[i].ToString();
+                bool XYvariant = (pokemon[i].Name[pokemon[i].Name.Length - 1] != 'X' && pokemon[i].Name[pokemon[i].Name.Length - 1] != 'Y');
+                if (pokemon[i].Name.Contains("Mega") && XYvariant)
+                {
+                    imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Mega (Custom).png";
+                }
+                else if (pokemon[i].Name.Contains("Mega"))
+                {
+                    imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Mega-{pokemon[i].Name[pokemon[i].Name.Length - 1]} (Custom).png";
+                }
+                else if (pokemon[i].Name.Contains("Alola"))
+                {
+                    imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')}-Alola (Custom).png";
+                }
+                else
+                {
+                    imagePath = $"..\\..\\pokeImg\\{pokemon[i].Num.ToString().PadLeft(3, '0')} (Custom).png";
+                }
+                pokemonImage.Image = Image.FromFile(imagePath);
             }
             catch (Exception exc)
             {

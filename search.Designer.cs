@@ -32,7 +32,9 @@
             this.searchLabel = new System.Windows.Forms.Label();
             this.searchTextinput = new CustomControls.RJControls.RJTextBox();
             this.searchData = new CustomControls.RJControls.RJButton();
+            this.searchVeiw = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchVeiw)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -75,6 +77,7 @@
             this.searchTextinput.TabIndex = 7;
             this.searchTextinput.Texts = "";
             this.searchTextinput.UnderlinedStyle = false;
+            this.searchTextinput._TextChanged += new System.EventHandler(this.searchTextinput__TextChanged);
             // 
             // searchData
             // 
@@ -93,6 +96,29 @@
             this.searchData.Text = "Search";
             this.searchData.TextColor = System.Drawing.Color.White;
             this.searchData.UseVisualStyleBackColor = false;
+            this.searchData.Click += new System.EventHandler(this.searchData_Click);
+            // 
+            // searchVeiw
+            // 
+            this.searchVeiw.AllowUserToAddRows = false;
+            this.searchVeiw.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.searchVeiw.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.searchVeiw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.searchVeiw.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.searchVeiw.Location = new System.Drawing.Point(0, 59);
+            this.searchVeiw.MultiSelect = false;
+            this.searchVeiw.Name = "searchVeiw";
+            this.searchVeiw.ReadOnly = true;
+            this.searchVeiw.RowHeadersVisible = false;
+            this.searchVeiw.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.searchVeiw.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.searchVeiw.ShowCellErrors = false;
+            this.searchVeiw.ShowCellToolTips = false;
+            this.searchVeiw.ShowEditingIcon = false;
+            this.searchVeiw.ShowRowErrors = false;
+            this.searchVeiw.Size = new System.Drawing.Size(284, 359);
+            this.searchVeiw.TabIndex = 3;
+            this.searchVeiw.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
             // 
             // search
             // 
@@ -100,6 +126,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(284, 418);
+            this.Controls.Add(this.searchVeiw);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -107,6 +134,7 @@
             this.Text = "search box";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchVeiw)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -117,5 +145,6 @@
         private System.Windows.Forms.Label searchLabel;
         private CustomControls.RJControls.RJTextBox searchTextinput;
         private CustomControls.RJControls.RJButton searchData;
+        private System.Windows.Forms.DataGridView searchVeiw;
     }
 }

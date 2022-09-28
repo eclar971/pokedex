@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.deletePokemon = new CustomControls.RJControls.RJButton();
-            this.rjCircularPictureBox1 = new CustomControls.RJControls.RJCircularPictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            this.removeImg = new CustomControls.RJControls.RJCircularPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.removeImg)).BeginInit();
             this.SuspendLayout();
             // 
             // deletePokemon
@@ -52,21 +52,22 @@
             this.deletePokemon.Text = "Delete";
             this.deletePokemon.TextColor = System.Drawing.Color.White;
             this.deletePokemon.UseVisualStyleBackColor = false;
+            this.deletePokemon.Click += new System.EventHandler(this.deletePokemon_Click);
             // 
-            // rjCircularPictureBox1
+            // removeImg
             // 
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 2;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(60, 36);
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(310, 310);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox1.TabIndex = 2;
-            this.rjCircularPictureBox1.TabStop = false;
+            this.removeImg.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.removeImg.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.removeImg.BorderColor2 = System.Drawing.Color.HotPink;
+            this.removeImg.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.removeImg.BorderSize = 2;
+            this.removeImg.GradientAngle = 50F;
+            this.removeImg.Location = new System.Drawing.Point(60, 36);
+            this.removeImg.Name = "removeImg";
+            this.removeImg.Size = new System.Drawing.Size(310, 310);
+            this.removeImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.removeImg.TabIndex = 2;
+            this.removeImg.TabStop = false;
             // 
             // removePokemon
             // 
@@ -74,10 +75,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Controls.Add(this.deletePokemon);
-            this.Controls.Add(this.rjCircularPictureBox1);
+            this.Controls.Add(this.removeImg);
             this.Name = "removePokemon";
             this.Size = new System.Drawing.Size(430, 457);
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.removePokemon_Load);
+            this.VisibleChanged += new System.EventHandler(this.remove_Visable);
+            ((System.ComponentModel.ISupportInitialize)(this.removeImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -85,6 +88,6 @@
         #endregion
 
         private CustomControls.RJControls.RJButton deletePokemon;
-        private CustomControls.RJControls.RJCircularPictureBox rjCircularPictureBox1;
+        private CustomControls.RJControls.RJCircularPictureBox removeImg;
     }
 }

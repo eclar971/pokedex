@@ -126,6 +126,13 @@ namespace pokedex
 
         private void rightScroll_Click_1(object sender, EventArgs e)
         {
+            removePokemon1.Hide();
+            addPokemon1.Hide();
+            changeStatsScreen1.Hide();
+            statsScreen1.Hide();
+            seenScreen1.Hide();
+            caughtScreen1.Hide();
+            scollerSceen1.Hide();
             search search = new search();
             search.Show();
         }
