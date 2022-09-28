@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.searchLabel = new System.Windows.Forms.Label();
             this.searchTextinput = new CustomControls.RJControls.RJTextBox();
@@ -45,7 +46,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(284, 61);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(334, 61);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // searchLabel
@@ -104,6 +105,15 @@
             this.searchVeiw.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.searchVeiw.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.searchVeiw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.searchVeiw.ColumnHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.searchVeiw.DefaultCellStyle = dataGridViewCellStyle1;
             this.searchVeiw.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.searchVeiw.Location = new System.Drawing.Point(0, 59);
             this.searchVeiw.MultiSelect = false;
@@ -112,11 +122,12 @@
             this.searchVeiw.RowHeadersVisible = false;
             this.searchVeiw.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.searchVeiw.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.searchVeiw.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.searchVeiw.ShowCellErrors = false;
             this.searchVeiw.ShowCellToolTips = false;
             this.searchVeiw.ShowEditingIcon = false;
             this.searchVeiw.ShowRowErrors = false;
-            this.searchVeiw.Size = new System.Drawing.Size(284, 359);
+            this.searchVeiw.Size = new System.Drawing.Size(334, 302);
             this.searchVeiw.TabIndex = 3;
             this.searchVeiw.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
             // 
@@ -125,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(284, 418);
+            this.ClientSize = new System.Drawing.Size(334, 361);
             this.Controls.Add(this.searchVeiw);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
