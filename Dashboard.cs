@@ -140,14 +140,6 @@ namespace pokedex
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
-            PrivateFontCollection modernFont = new PrivateFontCollection();
-
-            modernFont.AddFontFile($"..\\..\\Pokemon Classic.ttf");
-            foreach (Control i in flowLayoutPanel1.Controls)
-            {
-                i.Font = new Font(modernFont.Families[0], 10); ;
-            }
         }
     }
 }
